@@ -1,0 +1,475 @@
+{% extends "document/base.html" %}
+
+{% block title %}IIIF Manifest Generator{% endblock %}
+
+{% block content %}
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700&display=swap" rel="stylesheet">
+<style>
+  body {
+    background: #F8F8F8;
+    font-family: 'Roboto', sans-serif;
+    color: #212121;
+  }
+  .iiif-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 24px;
+  }
+  .iiif-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5rem;
+    color: #283593;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .iiif-lead {
+    color: #757575;
+    font-size: 1.125rem;
+    margin-bottom: 2em;
+    text-align: center;
+  }
+  .iiif-progress-section {
+    background: #E8EAF6;
+    border-radius: 8px;
+    padding: 32px 24px 24px 24px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    border: 1px solid #C5CAE9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .iiif-progress-label {
+    font-weight: 600;
+    color: #283593;
+    margin-bottom: 16px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .iiif-progress {
+    background: #E0E0E0;
+    border-radius: 8px;
+    height: 32px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+  .iiif-progress-bar {
+    background: linear-gradient(90deg, #00838F 0%, #283593 100%);
+    height: 100%;
+    transition: width 0.4s;
+  }
+  .iiif-progress-text {
+    font-size: 1.1rem;
+    color: #00838F;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  .iiif-controls {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 24px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .iiif-controls label {
+    font-weight: 500;
+    color: #283593;
+  }
+  .iiif-controls input[type="text"] {
+    border-radius: 4px;
+    border: 1px solid #C5CAE9;
+    padding: 8px 12px;
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 4px;
+  }
+  .iiif-btn-primary {
+    background: #283593;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 14px 32px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-right: 12px;
+    transition: background 0.2s;
+    box-shadow: 0 2px 4px rgba(40,53,147,0.08);
+  }
+  .iiif-btn-primary:hover {
+    background: #00838F;
+  }
+  .iiif-btn-secondary {
+    background: #fff;
+    color: #283593;
+    border: 1px solid #283593;
+    border-radius: 4px;
+    padding: 14px 32px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background 0.2s, color 0.2s;
+  }
+  .iiif-btn-secondary:hover {
+    background: #283593;
+    color: #fff;
+  }
+  .iiif-btn-danger {
+    background: #D32F2F;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 14px 32px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background 0.2s;
+    box-shadow: 0 2px 4px rgba(211,47,47,0.08);
+  }
+  .iiif-btn-danger:hover {
+    background: #C62828;
+  }
+  .iiif-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+    margin-top: 32px;
+  }
+  .iiif-card {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #E0E0E0;
+  }
+  .iiif-card-title {
+    font-size: 1rem;
+    color: #757575;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+  }
+  .iiif-card-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #283593;
+  }
+  .iiif-card-value.accent {
+    color: #00838F;
+  }
+  .iiif-card-value.success {
+    color: #4CAF50;
+  }
+  .iiif-card-value.warning {
+    color: #FFA000;
+  }
+  .iiif-log-section {
+    background: #F8F8F8;
+    border-radius: 4px;
+    padding: 16px;
+    font-family: monospace;
+    height: 240px;
+    overflow-y: auto;
+    border: 1px solid #E0E0E0;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .iiif-log-entry {
+    margin-bottom: 2px;
+    color: #333;
+    font-size: 0.98rem;
+  }
+  .iiif-log-entry.error {
+    color: #D32F2F;
+  }
+  .iiif-log-entry.warning {
+    color: #FFA000;
+  }
+  .iiif-log-entry.success {
+    color: #4CAF50;
+  }
+  .iiif-log-entry.info {
+    color: #2196F3;
+  }
+  .iiif-log-timestamp {
+    color: #888;
+    font-size: 0.92em;
+    margin-right: 8px;
+  }
+  .iiif-status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  .iiif-status-indicator.running {
+    background-color: #4CAF50; /* Green */
+  }
+  .iiif-status-indicator.completed {
+    background-color: #9E9E9E; /* Gray */
+  }
+  .iiif-error-message {
+    background-color: #FFCDD2;
+    color: #D32F2F;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .iiif-success-message {
+    background-color: #E8F5E9;
+    color: #4CAF50;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  @media (max-width: 900px) {
+    .iiif-stats {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 600px) {
+    .iiif-stats {
+      grid-template-columns: 1fr;
+    }
+    .iiif-container {
+      padding: 24px 8px;
+    }
+  }
+</style>
+<div class="iiif-container">
+  <div class="iiif-title">IIIF Manifest Generator</div>
+  <div class="iiif-lead">Generate IIIF manifests for documents with page images</div>
+  <div class="iiif-progress-section" id="progressSection">
+    <div class="iiif-progress-label">
+      <span class="iiif-status-indicator" id="statusIndicator"></span>
+      Generation Progress
+    </div>
+    <div class="iiif-progress">
+      <div class="iiif-progress-bar" style="width: 0%"></div>
+    </div>
+    <div class="iiif-progress-text" id="progressText">Initializing...</div>
+    <div style="margin-bottom: 12px; text-align: center;">
+      <span id="currentSource"></span>
+      <span id="progressDetails"></span>
+      <span id="eta"></span>
+    </div>
+    <form id="manifestForm" class="iiif-controls">
+      <div style="flex: 1 1 200px; min-width: 180px;">
+        <label for="skipExisting">
+          <input class="form-check-input" type="checkbox" id="skipExisting" checked style="margin-right: 8px;">
+          Skip existing manifests (recommended)
+        </label>
+      </div>
+      <div style="flex: 2 1 300px; min-width: 220px;">
+        <label for="shortref">Filter by Short Reference (optional)</label>
+        <input type="text" class="form-control" id="shortref" placeholder="e.g., CLEMENTS, TEST">
+        <small style="color: #757575;">Only process sources matching this string</small>
+      </div>
+      <div style="flex: 1 1 100%; display: flex; justify-content: center; min-width: 160px;">
+        <button type="submit" class="iiif-btn-primary" id="generateBtn">
+          &#9654; Start Generation
+        </button>
+      </div>
+    </form>
+    <div style="margin: 12px 0; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+      <label>Filter:
+        <select id="logFilter">
+          <option value="all">All</option>
+          <option value="error">Errors</option>
+          <option value="warning">Warnings</option>
+          <option value="success">Success</option>
+          <option value="info">Info</option>
+        </select>
+      </label>
+      <label>Search:
+        <input type="text" id="logSearch" placeholder="Search logs..." style="padding: 4px 8px; border-radius: 4px; border: 1px solid #C5CAE9;">
+      </label>
+    </div>
+  </div>
+  <div id="messageContainer"></div>
+  <div class="iiif-log-section" id="logContainer">
+    <div class="text-muted">No activity yet...</div>
+  </div>
+  <div class="iiif-stats">
+    <div class="iiif-card">
+      <div class="iiif-card-title">Total Sources</div>
+      <div class="iiif-card-value">{{ total_sources }}</div>
+    </div>
+    <div class="iiif-card">
+      <div class="iiif-card-title">With Page Images</div>
+      <div class="iiif-card-value accent">{{ sources_with_pages }}</div>
+    </div>
+    <div class="iiif-card">
+      <div class="iiif-card-title">With Manifests</div>
+      <div class="iiif-card-value success">{{ sources_with_manifests }}</div>
+    </div>
+    <div class="iiif-card">
+      <div class="iiif-card-title">Needing Manifests</div>
+      <div class="iiif-card-value warning">{{ sources_needing_manifests }}</div>
+    </div>
+  </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('manifestForm');
+    const progressSection = document.getElementById('progressSection');
+    const progressBar = document.querySelector('.iiif-progress-bar');
+    const progressText = document.getElementById('progressText');
+    const logContainer = document.getElementById('logContainer');
+    const generateBtn = document.getElementById('generateBtn');
+    const statusIndicator = document.getElementById('statusIndicator');
+    const messageContainer = document.getElementById('messageContainer');
+    const logFilter = document.getElementById('logFilter');
+    const logSearch = document.getElementById('logSearch');
+    const currentSource = document.getElementById('currentSource');
+    const progressDetails = document.getElementById('progressDetails');
+    const eta = document.getElementById('eta');
+
+    let logHistory = [];
+    let lastLogLength = 0;
+    let isRunning = false;
+    let allLogs = [];
+
+    function showMessage(message, type = 'info') {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = type === 'error' ? 'iiif-error-message' : 'iiif-success-message';
+        messageDiv.textContent = message;
+        messageContainer.innerHTML = '';
+        messageContainer.appendChild(messageDiv);
+        setTimeout(() => {
+            messageDiv.remove();
+        }, 5000);
+    }
+
+    function updateStatusIndicator(status) {
+        statusIndicator.className = `iiif-status-indicator ${status}`;
+    }
+
+    function formatLogEntry(log) {
+        const ts = log.timestamp ? new Date(log.timestamp).toLocaleTimeString() : '';
+        const typeClass = log.level ? ` ${log.level}` : '';
+        return `<div class="iiif-log-entry${typeClass}"><span class="iiif-log-timestamp">[${ts}]</span>${log.message}</div>`;
+    }
+
+    function renderLogs() {
+        let logs = allLogs;
+        const filter = logFilter.value;
+        const search = logSearch.value.toLowerCase();
+        if (filter !== 'all') {
+            logs = logs.filter(log => log.level === filter);
+        }
+        if (search) {
+            logs = logs.filter(log => log.message.toLowerCase().includes(search));
+        }
+        if (logs.length === 0) {
+            logContainer.innerHTML = '<div class="text-muted">No matching log entries.</div>';
+        } else {
+            logContainer.innerHTML = logs.map(formatLogEntry).join('');
+            logContainer.scrollTop = logContainer.scrollHeight;
+        }
+    }
+
+    function updateStatus() {
+        fetch("/document/iiif-generator/status/")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const percent = data.progress_percentage.toFixed(1);
+                progressBar.style.width = percent + '%';
+                progressText.textContent = `Progress: ${percent}% (${data.sources_with_manifests} of ${data.sources_with_pages})`;
+                // Progress details
+                if (data.current_source && data.current_source.title) {
+                    currentSource.textContent = `Current: ${data.current_source.title}`;
+                } else {
+                    currentSource.textContent = '';
+                }
+                progressDetails.textContent = `Processed: ${data.sources_with_manifests} / ${data.sources_with_pages}`;
+                if (data.estimated_time_remaining !== null && data.estimated_time_remaining !== undefined) {
+                    let mins = Math.floor(data.estimated_time_remaining / 60);
+                    let secs = data.estimated_time_remaining % 60;
+                    eta.textContent = ` | ETA: ${mins}m ${secs}s`;
+                } else {
+                    eta.textContent = '';
+                }
+                // Status indicator
+                if (data.running) {
+                    updateStatusIndicator('running');
+                    generateBtn.style.display = 'none';
+                } else {
+                    updateStatusIndicator('completed');
+                    generateBtn.style.display = 'inline-block';
+                }
+                // Logs
+                if (data.logs && data.logs.length > 0) {
+                    allLogs = data.logs.slice().reverse(); // oldest first
+                    renderLogs();
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching status:', error);
+                showMessage('Error fetching status. Please try refreshing.', 'error');
+            });
+    }
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const skipExisting = document.getElementById('skipExisting').checked;
+        const shortref = document.getElementById('shortref').value;
+        generateBtn.disabled = true;
+        generateBtn.textContent = 'Starting...';
+        fetch("/document/iiif-generator/api/", {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                skip_existing: skipExisting,
+                shortref: shortref
+            })
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            showMessage('Manifest generation started successfully!', 'success');
+            updateStatus();
+        })
+        .catch(error => {
+            console.error('Error starting generation:', error);
+            showMessage('Error starting manifest generation. Please try again.', 'error');
+        })
+        .finally(() => {
+            generateBtn.disabled = false;
+            generateBtn.textContent = '▶ Start Generation';
+        });
+    });
+
+    logFilter.addEventListener('change', renderLogs);
+    logSearch.addEventListener('input', renderLogs);
+
+    // Initial status check
+    updateStatus();
+    setInterval(updateStatus, 2000);
+});
+</script>
+{% endblock %} 
