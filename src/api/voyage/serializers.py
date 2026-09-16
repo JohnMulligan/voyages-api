@@ -280,6 +280,7 @@ class VoyageEnslaverSerializer(serializers.Serializer):
 class LinkedVoyageSerializer(serializers.Serializer):
 	voyage_id=serializers.IntegerField()
 
+
 class VoyageSerializer(serializers.ModelSerializer):
 	sources=serializers.SerializerMethodField(required=False,allow_null=True)
 	voyage_itinerary=VoyageItinerarySerializer(many=False,read_only=True)
@@ -315,7 +316,7 @@ class VoyageSerializer(serializers.ModelSerializer):
 			cargo_return.append(" ".join([i for i in [amount,unit,cargo] if i is not None]))
 		return cargo_return
 	
-	def get_linked_voyages(self,instance) -> VoyageSourceSerializer(many=True):
+	def get_linked_voyages(self,instance) -> LinkedVoyageSerializer(many=True):
 		incoming=instance.incoming_from_other_voyages.all()
 		outgoing=instance.outgoing_to_other_voyages.all()
 		incoming_ids=[i.first for i in incoming]
