@@ -142,7 +142,7 @@ class VoyageDownload(generics.GenericAPIView):
 		if r.ok:
 			resp=r.content
 		else:
-			return JsonResponse({"message":"unknown error"},status=400)
+			return JsonResponse({"message":"unknown error"},status=502)
 		
 		if DEBUG:
 			print("Internal Response Time:",time.time()-st,"\n+++++++")
@@ -207,7 +207,7 @@ class VoyageAggregations(generics.GenericAPIView):
 			#VALIDATE THE RESPONSE
 			serialized_resp=VoyageFieldAggregationResponseSerializer(data=output_dict)
 			if not serialized_resp.is_valid():
-				return JsonResponse(serialized_resp.errors,status=400)
+				return JsonResponse(serialized_resp.errors,status=500)
 			else:
 				resp=serialized_resp.data
 			#SAVE THIS NEW RESPONSE TO THE REDIS CACHE
@@ -274,10 +274,10 @@ class VoyageCrossTabs(generics.GenericAPIView):
 			j=json.loads(r.text)
 			serialized_resp=VoyageCrossTabResponseSerializer(data=j)
 		else:
-			return JsonResponse({'message':r.text},status=400)
+			return JsonResponse({'message':r.text},status=502)
 			
 		if not serialized_resp.is_valid():
-			return JsonResponse(serialized_resp.errors,status=400)
+			return JsonResponse(serialized_resp.errors,status=502)
 		else:
 			resp=serialized_resp.data
 		
@@ -447,7 +447,7 @@ class VoyageSummaryStats(generics.GenericAPIView):
 			serialized_resp=VoyageSummaryStatsResponseSerializer(data=j)
 		print("Internal Response Time:",time.time()-st,"\n+++++++")
 		if not serialized_resp.is_valid():
-			return JsonResponse(serialized_resp.errors,status=400)
+			return JsonResponse(serialized_resp.errors,status=502)
 		else:
 			return JsonResponse(serialized_resp.data,safe=False)
 
@@ -627,7 +627,7 @@ class VoyageAggRoutes(generics.GenericAPIView):
 			j=json.loads(r.text)
 			serialized_resp=VoyageAggRoutesResponseSerializer(data=j)
 		if not serialized_resp.is_valid():
-			return JsonResponse(serialized_resp.errors,status=400)
+			return JsonResponse(serialized_resp.errors,status=502)
 		else:
 			resp=serialized_resp.data
 		

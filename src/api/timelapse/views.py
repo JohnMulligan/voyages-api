@@ -195,7 +195,7 @@ class VoyageAnimation(generics.GenericAPIView):
 				j=json.loads(r.text)
 				serialized_resp=TimeLapseResponseItemSerializer(data=j,many=True)
 			if not serialized_resp.is_valid():
-				return JsonResponse(serialized_resp.errors,status=500,safe=False)
+				return JsonResponse(serialized_resp.errors,status=502,safe=False)
 			else:
 				resp=serialized_resp.data
 			#SAVE THIS NEW RESPONSE TO THE REDIS CACHE

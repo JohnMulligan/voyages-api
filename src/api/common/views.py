@@ -69,7 +69,7 @@ class GlobalSearch(generics.GenericAPIView):
 	@extend_schema(
 		description="This endpoint takes a string and passes it on to Solr, which searches across all indexed text fields (currently all text fields) in our core models (Voyages, Enslaved People, Enslavers, and Blog Posts [documents next...]). It returns counts and the first 10 primary keys for each",
 		request=GlobalSearchRequestSerializer,
-		responses=GlobalSearchResponseItemSerializer
+		responses=GlobalSearchResponseSerializer
 	)
 	def post(self,request):
 		st=time.time()
@@ -107,7 +107,13 @@ class GlobalSearch(generics.GenericAPIView):
 		else:
 			search_string=re.sub("\s+"," ",search_string)
 			search_string=search_string.strip()
-			searchstringcomponents=[''.join(filter(str.isalnum,s)) for s in search_string.split(' ')]
+			searchstringcomponents=[c for c in [''.join(filter(str.isalnum,s)) for s in search_string.split(' ')] if c]
+			
+			if not searchstringcomponents:
+				return JsonResponse(
+					{'search_string':['No searchable terms remain after sanitization.']},
+					status=400
+				)
 		
 			core_names=[ct[0] for ct in coretuples]
 			
@@ -119,7 +125,13 @@ class GlobalSearch(generics.GenericAPIView):
 						timeout=10
 					)
 				finalsearchstring="(%s)" %(" ").join(searchstringcomponents)
-				results=solr.search(f'text:{finalsearchstring}')
+				try:
+					results=solr.search(f'text:{finalsearchstring}')
+				except pysolr.SolrError:
+					return JsonResponse(
+						{'detail':'The search backend could not process this query.'},
+						status=502
+					)
 				results_count=results.hits
 				
 				ids=[r['id'] for r in results]
@@ -130,10 +142,12 @@ class GlobalSearch(generics.GenericAPIView):
 				})
 
 		#VALIDATE THE RESPONSE
-		serialized_resp=GlobalSearchResponseItemSerializer(data=output_dict,many=True)
+		serialized_resp=GlobalSearchResponseSerializer(data={'results':output_dict})
+		
+		
 		print("Internal Response Time:",time.time()-st,"\n+++++++")
 		if not serialized_resp.is_valid():
-			return JsonResponse(serialized_resp.errors,status=400)
+			return JsonResponse(serialized_resp.errors,status=500)
 		else:
 			return JsonResponse(serialized_resp.data,safe=False)
 
