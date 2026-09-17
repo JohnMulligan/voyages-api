@@ -162,8 +162,17 @@ class UseSavedSearchResponseSerializer(serializers.Serializer):
 )
 class GlobalSearchRequestSerializer(serializers.Serializer):
 	search_string=serializers.CharField(max_length=500)
+
+
+
+
 	
 class GlobalSearchResponseItemSerializer(serializers.Serializer):
 	type=serializers.CharField(max_length=50)
 	results_count=serializers.IntegerField()
-	ids=serializers.ListField(child=serializers.IntegerField(),required=False)
+	ids=serializers.ListField(child=serializers.IntegerField())
+
+class GlobalSearchResponseSerializer(serializers.Serializer):
+	results=GlobalSearchResponseItemSerializer(many=True)
+		
+

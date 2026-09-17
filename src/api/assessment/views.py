@@ -144,7 +144,7 @@ class EstimateTimeline(generics.GenericAPIView):
 			
 		print("Internal Response Time:",time.time()-st,"\n+++++++")
 		if not serialized_resp.is_valid():
-			return JsonResponse(serialized_resp.errors,status=400)
+			return JsonResponse(serialized_resp.errors,status=502)
 		else:
 			return JsonResponse(serialized_resp.data,safe=False)
 
@@ -198,7 +198,7 @@ class EstimateCrossTabs(generics.GenericAPIView):
 		#WE NEED TO SEND BACK THE RESPONSE AS A CSV, PROBABLY USING THIS: django.http.response.FileResponse
 		
 		if not serialized_resp.is_valid():
-			return JsonResponse(serialized_resp.errors,status=400)
+			return JsonResponse(serialized_resp.errors,status=502)
 		else:
 			return JsonResponse(serialized_resp.data,safe=False)
 
@@ -272,7 +272,7 @@ class EstimateAggRoutes(generics.GenericAPIView):
 				j=json.loads(r.text)
 				serialized_resp=EstimateAggRoutesResponseSerializer(data=j)
 			if not serialized_resp.is_valid():
-				return JsonResponse(serialized_resp.errors,status=400)
+				return JsonResponse(serialized_resp.errors,status=502)
 			else:
 				resp=serialized_resp.data
 			#SAVE THIS NEW RESPONSE TO THE REDIS CACHE

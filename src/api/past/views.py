@@ -290,7 +290,7 @@ class EnslavedAggregations(generics.GenericAPIView):
 			#VALIDATE THE RESPONSE
 			serialized_resp=EnslavedFieldAggregationResponseSerializer(data=output_dict)
 			if not serialized_resp.is_valid():
-				return JsonResponse(serialized_resp.errors,status=400)
+				return JsonResponse(serialized_resp.errors,status=500)
 			else:
 				resp=serialized_resp.data
 			#SAVE THIS NEW RESPONSE TO THE REDIS CACHE
@@ -377,7 +377,7 @@ class EnslaverAggregations(generics.GenericAPIView):
 			#VALIDATE THE RESPONSE
 			serialized_resp=EnslaverFieldAggregationResponseSerializer(data=output_dict)
 			if not serialized_resp.is_valid():
-				return JsonResponse(serialized_resp.errors,status=400)
+				return JsonResponse(serialized_resp.errors,status=500)
 			else:
 				resp=serialized_resp.data
 			#SAVE THIS NEW RESPONSE TO THE REDIS CACHE
@@ -761,7 +761,7 @@ class EnslavedAggRoutes(generics.GenericAPIView):
 			j=json.loads(r.text)
 			serialized_resp=EnslavedAggRoutesResponseSerializer(data=j)
 		if not serialized_resp.is_valid():
-			return JsonResponse(serialized_resp.errors,status=400)
+			return JsonResponse(serialized_resp.errors,status=502)
 		else:
 			resp=serialized_resp.data
 			
@@ -797,7 +797,7 @@ class PASTNetworks(generics.GenericAPIView):
 			j=json.loads(r.text)
 			serialized_resp=PASTNetworksResponseSerializer(data=j)
 		if not serialized_resp.is_valid():
-			return JsonResponse(serialized_resp.errors,status=400)
+			return JsonResponse(serialized_resp.errors,status=502)
 		else:
 			resp=serialized_resp.data
 		
