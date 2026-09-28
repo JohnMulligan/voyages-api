@@ -56,7 +56,14 @@ class Command(BaseCommand):
 					'name_second',
 					'name_third',
 					'modern_name',
-					'notes'
+					'notes',
+					'enslaved_relations__relation__voyage__voyage_itinerary__imp_port_voyage_begin__name',
+					'enslaved_relations__relation__voyage__voyage_itinerary__imp_principal_place_of_slave_purchase__name',
+					'enslaved_relations__relation__voyage__voyage_itinerary__imp_principal_port_slave_dis__name',
+					'enslaved_relations__relation__voyage__voyage_itinerary__imp_principal_region_of_slave_purchase__name',
+					'enslaved_relations__relation__voyage__voyage_itinerary__imp_principal_region_slave_dis__name',
+					'enslaved_relations__relation__voyage__voyage_ship__ship_name',
+					'enslaved_relations__relation__voyage__voyage_outcome__particular_outcome__name'
 				]
 			},
 			{

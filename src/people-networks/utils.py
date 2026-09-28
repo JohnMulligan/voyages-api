@@ -189,7 +189,7 @@ def load_graph():
 			#enslaver-to-enslaver marriages
 			if len(enslaver_uuids)==2:
 				alice,bob=enslaver_uuids
-				G.add_edge(alice,bob)
+				G.add_edge(alice,bob,role_name='Spouse')
 			else:
 				print("got more or fewer spouses than anticipated-->",enslaver_uuids,relation_connections)
 		elif relation_type in ["Transportation","Ownership"]:
@@ -281,7 +281,7 @@ def load_graph():
 								roles=', '.join(list(set(enslaver_roles[enslaver_uuid])))
 								G.add_edge(enslaver_uuid,voyage_uuid,role_name=roles)
 							for eduu in enslaved_uuids:
-								G.add_edge(eduu,voyage_uuid)	
+								G.add_edge(eduu,voyage_uuid,role_name="Enslaved")	
 						else:
 							#B. DIRECT IS DIFFICULT
 

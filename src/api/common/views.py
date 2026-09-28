@@ -1,4 +1,4 @@
-from django.http import Http404, HttpResponse, HttpResponseForbidden, JsonResponse
+from django.http import Http404, HttpResponse, HttpResponseForbidden, JsonResponse,HttpResponseBadRequest
 from django.shortcuts import render,get_object_or_404
 from rest_framework.schemas.openapi import AutoSchema
 from rest_framework import generics
@@ -69,7 +69,7 @@ class GlobalSearch(generics.GenericAPIView):
 	@extend_schema(
 		description="This endpoint takes a string and passes it on to Solr, which searches across all indexed text fields (currently all text fields) in our core models (Voyages, Enslaved People, Enslavers, and Blog Posts [documents next...]). It returns counts and the first 10 primary keys for each",
 		request=GlobalSearchRequestSerializer,
-		responses=GlobalSearchResponseItemSerializer
+		responses=GlobalSearchResponseSerializer
 	)
 	def post(self,request):
 		st=time.time()
@@ -107,7 +107,13 @@ class GlobalSearch(generics.GenericAPIView):
 		else:
 			search_string=re.sub("\s+"," ",search_string)
 			search_string=search_string.strip()
-			searchstringcomponents=[''.join(filter(str.isalnum,s)) for s in search_string.split(' ')]
+			searchstringcomponents=[c for c in [''.join(filter(str.isalnum,s)) for s in search_string.split(' ')] if c]
+			
+			if not searchstringcomponents:
+				return JsonResponse(
+					{'search_string':['No searchable terms remain after sanitization.']},
+					status=400
+				)
 		
 			core_names=[ct[0] for ct in coretuples]
 			
@@ -119,7 +125,13 @@ class GlobalSearch(generics.GenericAPIView):
 						timeout=10
 					)
 				finalsearchstring="(%s)" %(" ").join(searchstringcomponents)
-				results=solr.search(f'text:{finalsearchstring}')
+				try:
+					results=solr.search(f'text:{finalsearchstring}')
+				except pysolr.SolrError:
+					return JsonResponse(
+						{'detail':'The search backend could not process this query.'},
+						status=502
+					)
 				results_count=results.hits
 				
 				ids=[r['id'] for r in results]
@@ -130,19 +142,23 @@ class GlobalSearch(generics.GenericAPIView):
 				})
 
 		#VALIDATE THE RESPONSE
-		serialized_resp=GlobalSearchResponseItemSerializer(data=output_dict,many=True)
+		serialized_resp=GlobalSearchResponseSerializer(data={'results':output_dict})
+		
+		
 		print("Internal Response Time:",time.time()-st,"\n+++++++")
 		if not serialized_resp.is_valid():
-			return JsonResponse(serialized_resp.errors,status=400)
+			return JsonResponse(serialized_resp.errors,status=500)
 		else:
 			return JsonResponse(serialized_resp.data,safe=False)
-
 
 class MakeSavedSearch(generics.GenericAPIView):
 	authentication_classes=[TokenAuthentication]
 	permission_classes=[IsAuthenticated]
 	@extend_schema(
-		description="This endpoint takes a filter object and specified endpoint, and returns a saved search url",
+		description="This endpoint takes a filter object and specified endpoint, \
+		and returns a saved search hash. Only successful (200) queries should be piped \
+		into this endpoint. The full_front_end_url field can be provided to an end-user \
+		to allow them to recreate and audit any search results.",
 		request=MakeSavedSearchRequestSerializer,
 		responses=MakeSavedSearchResponseSerializer
 	)
@@ -176,6 +192,25 @@ class MakeSavedSearch(generics.GenericAPIView):
 			query=serialized_req.data['query']
 			endpoint=serialized_req.data['endpoint']
 			front_end_path=serialized_req.data.get('front_end_path')
+			
+			if not front_end_path or front_end_path not in [
+				'past/enslaved/african-origins',
+				'/past/enslaved/texasEnslaved',
+				'past/enslaver/trans-atlantic-trades',
+				'past/enslaver/intra-american-trades',
+				'/voyage/trans-atlantic',
+				'/voyage/intra-american',
+				'/voyage/indian-ocean'
+			]:
+				if 'enslaver' in endpoint:
+					front_end_path='/past/enslaver/enslaver'
+				elif 'enslaved' in endpoint:
+					front_end_path='/past/enslaved/all-enslaved'
+				elif 'voyage' in endpoint:
+					front_end_path='voyage/all-voyages'
+				else:
+					return HttpResponseBadRequest
+			
 			SQ=SavedQuery.objects.create(
 				id=id,
 				hash_id=hash_id,
@@ -187,8 +222,14 @@ class MakeSavedSearch(generics.GenericAPIView):
 			print("retrieving existing saved search")
 			id=sq.id
 		
-		return JsonResponse({'id':id})
-
+		data={
+			'endpoint':srd['endpoint'],
+			'id':id
+		}
+		
+		serialized_response=MakeSavedSearchResponseSerializer(data)
+		
+		return JsonResponse(serialized_response.data)
 
 class UseSavedSearch(generics.RetrieveAPIView):	
 	'''
