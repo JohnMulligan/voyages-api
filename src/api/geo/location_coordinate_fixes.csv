@@ -1,0 +1,136 @@
+geo_location_id,name,latitude,longitude,confidence,note
+195,Barmouth,52.7222,-4.0556,high,
+196,Bideford,51.0167,-4.2083,high,
+197,Birkenhead,53.3934,-3.0148,high,
+199,Brixham,50.3947,-3.5150,high,
+201,Cawsand,50.3311,-4.2006,high,
+202,Chepstow,51.6418,-2.6738,high,
+207,Deptford,51.4793,-0.0260,high,
+211,Frodsham,53.2950,-2.7250,high,
+212,Gainsborough,53.3985,-0.7744,high,
+213,Greenwich,51.4826,-0.0077,high,
+215,Harwich,51.9417,1.2850,high,
+217,Ilfracombe,51.2087,-4.1201,high,
+219,Isle of Man,54.1500,-4.4800,medium,Douglas
+220,Isle of Wight,50.7620,-1.2980,medium,Cowes
+221,Jersey,49.1858,-2.1100,medium,St Helier
+223,King's Lynn,52.7543,0.3976,high,
+225,Lindale,54.2100,-2.8950,medium,"Lindale, Cumbria (near Grange-over-Sands)"
+230,Maryport,54.7136,-3.4950,high,
+234,Newnham,51.8050,-2.4500,medium,Newnham on Severn
+235,North Shields,55.0090,-1.4480,high,
+236,Northam,51.0390,-4.2150,medium,"Northam, Devon (next to Bideford)"
+237,Norwich,52.6309,1.2974,high,
+240,Piel of Foulney,54.0630,-3.1730,medium,"Piel Island, Barrow-in-Furness"
+243,Portsery,50.7980,-1.0910,low,"Unidentified; assumed Portsea (Portsmouth)"
+247,Ramsgate,51.3360,1.4160,high,
+248,Ravenglass,54.3550,-3.4090,high,
+250,Rochester,51.3880,0.5070,high,
+251,Rotherhithe,51.5010,-0.0520,high,
+252,Rye,50.9500,0.7340,high,
+253,Scarborough,54.2830,-0.3990,high,
+254,Sheerness,51.4410,0.7600,high,
+255,Shields,54.9990,-1.4320,medium,South Shields
+257,Sidmouth,50.6780,-3.2390,high,
+261,Stockwithe,53.4400,-0.8160,medium,"West Stockwith, on the Trent"
+262,Sunderland,54.9060,-1.3810,high,
+263,Teignmouth,50.5470,-3.4960,high,
+265,Torbay,50.4610,-3.5250,high,Torquay
+270,Workington,54.6430,-3.5470,high,
+272,Youghal,51.9530,-7.8500,high,"Ireland, though filed under England and Wales"
+273,Conway,53.2800,-3.8290,high,Conwy
+293,Airth,56.0700,-3.7720,high,
+294,Borrowstounness,56.0170,-3.6080,high,Bo'ness
+295,Dundee,56.4620,-2.9710,high,
+299,Lough Neagh,54.6150,-6.4200,high,
+301,Ross,57.6800,-4.0350,low,"Ambiguous; assumed Ross-shire, placed at Cromarty"
+302,Saltcoats,55.6350,-4.7880,high,
+303,"Largo, Fifeshire",56.2170,-2.9300,high,
+305,Point Askaig,55.8480,-6.1070,high,"Port Askaig, Islay"
+308,Erwin,55.6120,-4.6690,low,"Unidentified; assumed Irvine, Ayrshire"
+331,Dungarvan,52.0880,-7.6250,high,
+335,Londonderry,54.9970,-7.3090,high,
+337,Strangford,54.3700,-5.5560,high,
+339,Wexford,52.3360,-6.4630,high,
+346,"Ireland, place unspecified",53.3440,-6.2670,medium,Dublin
+530,Germany - port unspecified,53.5450,9.9660,medium,Hamburg
+532,Flanders,51.2300,2.9200,medium,Ostend
+542,Bergen,60.3930,5.3240,high,
+547,"Norway, port unspecified",59.9100,10.7500,medium,Christiania (Oslo)
+557,"Sweden, port unspecified",57.7070,11.9670,medium,Gothenburg
+558,Genova,44.4050,8.9330,high,
+563,"Italy, port unspecified",43.5480,10.3100,medium,Livorno
+564,Kronstadt,59.9900,29.7700,high,
+566,"Russia, port unspecified",59.9340,30.3060,medium,St Petersburg
+567,Sardinia,39.2150,9.1100,medium,Cagliari
+592,Bath,43.9110,-69.8200,high,
+593,Berwick,43.2650,-70.8640,medium,South Berwick
+594,Biddeford,43.4930,-70.4530,high,
+595,Calais (Maine),45.1840,-67.2770,high,
+596,Camden,44.2100,-69.0650,high,
+598,Freeport,43.8570,-70.1030,high,
+600,Prospect,44.5560,-68.8600,medium,
+601,Richmond,44.0870,-69.7990,high,
+602,Robbinston,45.0640,-67.1270,high,
+603,Rockland,44.1040,-69.1090,high,
+605,Wiscasset,44.0030,-69.6650,high,
+613,Falmouth,43.7435,-70.2410,medium,Keeps existing DB latitude; longitude added
+619,"Maine, port unspecified",43.6590,-70.2570,medium,Portland
+682,"Delaware, port unspecified",39.7390,-75.5400,medium,Wilmington
+975,St. John,45.2730,-66.0630,medium,"Saint John, New Brunswick (could be St. John's, Newfoundland)"
+982,"Canada, port unspecified",44.6490,-63.5750,low,Halifax
+1397,Lima,-12.0560,-77.1180,medium,Callao (port of Lima)
+1399,"Peru, port unspecified",-12.0560,-77.1180,medium,Callao
+1944,Goa,15.50095,73.82939,high,Existing DB coordinates
+1955,Calcutta,22.57435,88.36287,high,Existing DB coordinates
+1983,"South Asia, port unspecified",8.08876,77.53383,high,Existing DB coordinates
+2052,British plantations,-13.1940596,-20.0982627,placeholder,Non-geographical; South Atlantic placeholder
+2053,Non-British,-13.1940596,-20.0982627,placeholder,Non-geographical; South Atlantic placeholder
+2054,Captured by WIC,-13.1940596,-20.0982627,placeholder,Non-geographical; South Atlantic placeholder
+2055,Captured interloper,-13.1940596,-20.0982627,placeholder,Non-geographical; South Atlantic placeholder
+2056,Prize (unknown place),-13.1940596,-20.0982627,placeholder,Non-geographical; South Atlantic placeholder
+2057,Prize (taken from Dutch),-13.1940596,-20.0982627,placeholder,Non-geographical; South Atlantic placeholder
+2058,Prize (taken from French),-13.1940596,-20.0982627,placeholder,Non-geographical; South Atlantic placeholder
+2059,Prize (taken from Spanish),-13.1940596,-20.0982627,placeholder,Non-geographical; South Atlantic placeholder
+2060,Sold at sea to another vessel,-13.1940596,-20.0982627,placeholder,Non-geographical; South Atlantic placeholder
+2061,Wreck,-13.1940596,-20.0982627,placeholder,Non-geographical; South Atlantic placeholder
+2062,Slaves rescued at sea from a shipwreck,-13.1940596,-20.0982627,placeholder,Non-geographical; South Atlantic placeholder
+2063,Prize (taken from Portuguese),-13.1940596,-20.0982627,placeholder,Non-geographical; South Atlantic placeholder
+2064,Prize (taken from USA),-13.1940596,-20.0982627,placeholder,Non-geographical; South Atlantic placeholder
+2065,Taken at sea from pirates,-13.1940596,-20.0982627,placeholder,Non-geographical; South Atlantic placeholder
+2066,Seized at sea by Spanish officials,-13.1940596,-20.0982627,placeholder,Non-geographical; South Atlantic placeholder
+2067,"Iberian World, port unspecified",-13.1940596,-20.0982627,placeholder,Non-geographical; South Atlantic placeholder
+2069,"Other, non Geographical",-13.1940596,-20.0982627,placeholder,Non-geographical; South Atlantic placeholder
+2070,???,-13.1940596,-20.0982627,placeholder,Non-geographical; South Atlantic placeholder
+709,Anne Arundel County,38.953,-76.5488,correction,DB latitude was 76.5488 (copy of longitude)
+744,Eastern Shore,37.5398,-75.823,correction,Longitude sign was missing
+817,"Cumberland Island,Georgia",30.8511,-81.4484,correction,Longitude sign was missing
+898,"Huntsville, AL",34.7304,-86.5861,correction,Longitude sign was missing
+1044,Goliad,28.6683,-97.3883,correction,Longitude sign was missing
+1053,Lexington,30.4191,-97.0117,correction,Longitude sign was missing
+1818,"Ponta da Lenha, Congo River",-6.035625,12.805306,correction,Latitude/longitude were swapped
+2083,"Rochdale, Queens, NY",40.675,-73.773,correction,"Was geocoded to Rochdale, England"
+155,Belém,38.697,-9.206,correction,"Filed under Portugal but geocoded to Belém, Brazil; moved to Belém, Lisbon"
+1936,Sur,22.5667,59.5289,correction,"Filed under Persian Gulf/Gulf of Oman but geocoded to Surat, India; moved to Sur, Oman"
+1954,Bengal,21.6457,87.99945,route-sync,Route file point disagreed with DB; DB value kept
+1302,Gonaïve,19.45115,-72.680158,route-sync,Route file point disagreed with DB; DB value kept
+1112,Guayama,17.9841,-66.1138,route-sync,Route file point disagreed with DB; DB value kept
+890,Catahoula Parish,31.7053,-91.9099,route-sync,Route file point disagreed with DB; DB value kept
+1052,Leon County,31.2153,-95.9833,route-sync,Route file point disagreed with DB; DB value kept
+1413,Aracaty,-4.5612,-37.7689,route-sync,Route file point disagreed with DB; DB value kept
+1815,Ascension Island,-7.9467,-14.355,route-sync,Route file point disagreed with DB; DB value kept
+1617,Goderich,8.427561,-13.285784,route-sync,Route file point disagreed with DB; DB value kept
+1848,Mauritius (Ile de France),-20.3,57.58333,route-sync,Route file point disagreed with DB; DB value kept
+1846,Port-Louis,-20.16089,57.50122,route-sync,Route file point disagreed with DB; DB value kept
+1844,"Bourbon, Reunion",-21.1,55.6,route-sync,Route file point disagreed with DB; DB value kept
+1838,"Pomba, Monfia",-5.03193,39.77555,route-sync,Route file point disagreed with DB; DB value kept
+1836,Momboza or Zanzibar,-6.16519,39.19891,route-sync,Route file point disagreed with DB; DB value kept
+1832,"Port Dauphin, Fort Dauphin",-25.02253,46.98536,route-sync,Route file point disagreed with DB; DB value kept
+1833,"Sainte Marie, St. Mary's Island",-16.89442,49.90594,route-sync,Route file point disagreed with DB; DB value kept
+1357,Darien,8.16294,-77.05417,route-sync,Route file point disagreed with DB; DB value kept
+1834,"Tulia, Tulear",-23.35161,43.68549,route-sync,Route file point disagreed with DB; DB value kept
+1841,"St. Lawrence, Madagascar",-18.76694,46.8691,route-sync,Route file point disagreed with DB; DB value kept
+1602,Charlotte,8.424166,-13.191667,route-sync,Route file point disagreed with DB; DB value kept
+1326,Fond-d'Icaques,18.536389,-73.977778,route-sync,Route file point disagreed with DB; DB value kept
+350,Calais,50.95129,1.858686,route-sync,Route file point disagreed with DB; DB value kept
+1821,Cabo Delgado,-12.33761,40.59913,route-sync,Route file point disagreed with DB; DB value kept

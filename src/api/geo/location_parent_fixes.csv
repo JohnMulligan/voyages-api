@@ -1,0 +1,5 @@
+geo_location_id,name,current_parent_id,new_parent_id,note
+1583,Delagoa,96,102,"Sierra Leone -> East Africa and Indian Ocean islands; coordinates are Delagoa Bay, Mozambique"
+860,Pawcatuck,43,33,"Florida -> Connecticut; Pawcatuck is in Stonington, CT"
+1100,Arequipa,85,86,Rio de la Plata -> Peru
+2221,Arequipa,85,86,Rio de la Plata -> Peru (duplicate of 1100)

@@ -201,23 +201,32 @@
    "name": "Great Britain, port unspecified"
   },
   "195": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     52.7222,
+     -4.0556
+    ]
    ],
    "name": "Barmouth"
   },
   "196": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     51.0167,
+     -4.2083
+    ]
    ],
    "name": "Bideford"
   },
   "197": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     53.3934,
+     -3.0148
+    ]
    ],
    "name": "Birkenhead"
   },
@@ -232,9 +241,12 @@
    "name": "Bristol"
   },
   "199": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     50.3947,
+     -3.515
+    ]
    ],
    "name": "Brixham"
   },
@@ -249,16 +261,22 @@
    "name": "Broadstairs"
   },
   "201": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     50.3311,
+     -4.2006
+    ]
    ],
    "name": "Cawsand"
   },
   "202": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     51.6418,
+     -2.6738
+    ]
    ],
    "name": "Chepstow"
   },
@@ -303,9 +321,12 @@
    "name": "Dartmouth"
   },
   "207": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     51.4793,
+     -0.026
+    ]
    ],
    "name": "Deptford"
   },
@@ -340,23 +361,32 @@
    "name": "Folkstone"
   },
   "211": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     53.295,
+     -2.725
+    ]
    ],
    "name": "Frodsham"
   },
   "212": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     53.3985,
+     -0.7744
+    ]
    ],
    "name": "Gainsborough"
   },
   "213": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     51.4826,
+     -0.0077
+    ]
    ],
    "name": "Greenwich"
   },
@@ -371,9 +401,12 @@
    "name": "Guernsey"
   },
   "215": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     51.9417,
+     1.285
+    ]
    ],
    "name": "Harwich"
   },
@@ -388,9 +421,12 @@
    "name": "Hull"
   },
   "217": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     51.2087,
+     -4.1201
+    ]
    ],
    "name": "Ilfracombe"
   },
@@ -405,23 +441,32 @@
    "name": "Ipswich"
   },
   "219": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     54.15,
+     -4.48
+    ]
    ],
    "name": "Isle of Man"
   },
   "220": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     50.762,
+     -1.298
+    ]
    ],
    "name": "Isle of Wight"
   },
   "221": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     49.1858,
+     -2.11
+    ]
    ],
    "name": "Jersey"
   },
@@ -436,9 +481,12 @@
    "name": "Kendal"
   },
   "223": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     52.7543,
+     0.3976
+    ]
    ],
    "name": "King's Lynn"
   },
@@ -453,9 +501,12 @@
    "name": "Lancaster"
   },
   "225": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     54.21,
+     -2.895
+    ]
    ],
    "name": "Lindale"
   },
@@ -490,9 +541,12 @@
    "name": "Lyme"
   },
   "230": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     54.7136,
+     -3.495
+    ]
    ],
    "name": "Maryport"
   },
@@ -527,30 +581,42 @@
    "name": "Newcastle upon Tyne"
   },
   "234": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     51.805,
+     -2.45
+    ]
    ],
    "name": "Newnham"
   },
   "235": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     55.009,
+     -1.448
+    ]
    ],
    "name": "North Shields"
   },
   "236": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     51.039,
+     -4.215
+    ]
    ],
    "name": "Northam"
   },
   "237": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     52.6309,
+     1.2974
+    ]
    ],
    "name": "Norwich"
   },
@@ -575,9 +641,12 @@
    "name": "Parkgate"
   },
   "240": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     54.063,
+     -3.173
+    ]
    ],
    "name": "Piel of Foulney"
   },
@@ -602,9 +671,12 @@
    "name": "Poole"
   },
   "243": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     50.798,
+     -1.091
+    ]
    ],
    "name": "Portsery"
   },
@@ -639,16 +711,22 @@
    "name": "Preston"
   },
   "247": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     51.336,
+     1.416
+    ]
    ],
    "name": "Ramsgate"
   },
   "248": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     54.355,
+     -3.409
+    ]
    ],
    "name": "Ravenglass"
   },
@@ -663,44 +741,62 @@
    "name": "River Thames"
   },
   "250": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     51.388,
+     0.507
+    ]
    ],
    "name": "Rochester"
   },
   "251": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     51.501,
+     -0.052
+    ]
    ],
    "name": "Rotherhithe"
   },
   "252": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     50.95,
+     0.734
+    ]
    ],
    "name": "Rye"
   },
   "253": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     54.283,
+     -0.399
+    ]
    ],
    "name": "Scarborough"
   },
   "254": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     51.441,
+     0.76
+    ]
    ],
    "name": "Sheerness"
   },
   "255": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     54.999,
+     -1.432
+    ]
    ],
    "name": "Shields"
   },
@@ -715,9 +811,12 @@
    "name": "Shoreham"
   },
   "257": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     50.678,
+     -3.239
+    ]
    ],
    "name": "Sidmouth"
   },
@@ -742,23 +841,32 @@
    "name": "Stockton"
   },
   "261": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     53.44,
+     -0.816
+    ]
    ],
    "name": "Stockwithe"
   },
   "262": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     54.906,
+     -1.381
+    ]
    ],
    "name": "Sunderland"
   },
   "263": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     50.547,
+     -3.496
+    ]
    ],
    "name": "Teignmouth"
   },
@@ -773,9 +881,12 @@
    "name": "Topsham"
   },
   "265": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     50.461,
+     -3.525
+    ]
    ],
    "name": "Torbay"
   },
@@ -810,9 +921,12 @@
    "name": "Whitehaven"
   },
   "270": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     54.643,
+     -3.547
+    ]
    ],
    "name": "Workington"
   },
@@ -827,16 +941,22 @@
    "name": "Yarmouth"
   },
   "272": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     51.953,
+     -7.85
+    ]
    ],
    "name": "Youghal"
   },
   "273": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     53.28,
+     -3.829
+    ]
    ],
    "name": "Conway"
   },
@@ -881,23 +1001,32 @@
    "name": "England, port unspecified"
   },
   "293": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     56.07,
+     -3.772
+    ]
    ],
    "name": "Airth"
   },
   "294": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     56.017,
+     -3.608
+    ]
    ],
    "name": "Borrowstounness"
   },
   "295": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     56.462,
+     -2.971
+    ]
    ],
    "name": "Dundee"
   },
@@ -932,9 +1061,12 @@
    "name": "Leith"
   },
   "299": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     54.615,
+     -6.42
+    ]
    ],
    "name": "Lough Neagh"
   },
@@ -949,23 +1081,32 @@
    "name": "Montrose"
   },
   "301": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     57.68,
+     -4.035
+    ]
    ],
    "name": "Ross"
   },
   "302": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     55.635,
+     -4.788
+    ]
    ],
    "name": "Saltcoats"
   },
   "303": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     56.217,
+     -2.93
+    ]
    ],
    "name": "Largo, Fifeshire"
   },
@@ -980,9 +1121,12 @@
    "name": "Dumfries"
   },
   "305": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     55.848,
+     -6.107
+    ]
    ],
    "name": "Point Askaig"
   },
@@ -1007,9 +1151,12 @@
    "name": "Portpatrick"
   },
   "308": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     55.612,
+     -4.669
+    ]
    ],
    "name": "Erwin"
   },
@@ -1074,9 +1221,12 @@
    "name": "Dublin"
   },
   "331": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     52.088,
+     -7.625
+    ]
    ],
    "name": "Dungarvan"
   },
@@ -1111,9 +1261,12 @@
    "name": "Limerick"
   },
   "335": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     54.997,
+     -7.309
+    ]
    ],
    "name": "Londonderry"
   },
@@ -1128,9 +1281,12 @@
    "name": "Ringsend"
   },
   "337": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     54.37,
+     -5.556
+    ]
    ],
    "name": "Strangford"
   },
@@ -1145,9 +1301,12 @@
    "name": "Waterford"
   },
   "339": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     52.336,
+     -6.463
+    ]
    ],
    "name": "Wexford"
   },
@@ -1172,9 +1331,12 @@
    "name": "Coleraine"
   },
   "346": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     53.344,
+     -6.267
+    ]
    ],
    "name": "Ireland, port unspecified"
   },
@@ -1212,8 +1374,8 @@
    "reg": 2,
    "path": [
     [
-     45.745724,
-     1.70685
+     50.95129,
+     1.858686
     ]
    ],
    "name": "Calais"
@@ -1769,9 +1931,12 @@
    "name": "Gl\u00fcckstadt"
   },
   "530": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     53.545,
+     9.966
+    ]
    ],
    "name": "Northern Germany - port unspecified"
   },
@@ -1786,9 +1951,12 @@
    "name": "Antwerp"
   },
   "532": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     51.23,
+     2.92
+    ]
    ],
    "name": "Flanders"
   },
@@ -1823,16 +1991,22 @@
    "name": "T\u00f8nsberg"
   },
   "542": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     60.393,
+     5.324
+    ]
    ],
    "name": "Bergen"
   },
   "547": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     59.91,
+     10.75
+    ]
    ],
    "name": "Norway, port unspecified"
   },
@@ -1847,16 +2021,22 @@
    "name": "G\u00f6teborg"
   },
   "557": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     57.707,
+     11.967
+    ]
    ],
    "name": "Sweden, port unspecified"
   },
   "558": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     44.405,
+     8.933
+    ]
    ],
    "name": "Genova"
   },
@@ -1881,16 +2061,22 @@
    "name": "Trieste"
   },
   "563": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     43.548,
+     10.31
+    ]
    ],
    "name": "Italy, port unspecified"
   },
   "564": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     59.99,
+     29.77
+    ]
    ],
    "name": "Kronstadt"
   },
@@ -1905,16 +2091,22 @@
    "name": "Odessa"
   },
   "566": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     59.934,
+     30.306
+    ]
    ],
    "name": "Russia, port unspecified"
   },
   "567": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     39.215,
+     9.11
+    ]
    ],
    "name": "Sardinia"
   },
@@ -2036,44 +2228,62 @@
    "name": "Rhode Island, port unspecified"
   },
   "592": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     43.911,
+     -69.82
+    ]
    ],
    "name": "Bath"
   },
   "593": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     43.265,
+     -70.864
+    ]
    ],
    "name": "Berwick"
   },
   "594": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     43.493,
+     -70.453
+    ]
    ],
    "name": "Biddeford"
   },
   "595": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     45.184,
+     -67.277
+    ]
    ],
    "name": "Calais (Maine)"
   },
   "596": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     44.21,
+     -69.065
+    ]
    ],
    "name": "Camden"
   },
   "598": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     43.857,
+     -70.103
+    ]
    ],
    "name": "Freeport"
   },
@@ -2088,30 +2298,42 @@
    "name": "Portland"
   },
   "600": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     44.556,
+     -68.86
+    ]
    ],
    "name": "Prospect"
   },
   "601": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     44.087,
+     -69.799
+    ]
    ],
    "name": "Richmond"
   },
   "602": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     45.064,
+     -67.127
+    ]
    ],
    "name": "Robbinston"
   },
   "603": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     44.104,
+     -69.109
+    ]
    ],
    "name": "Rockland"
   },
@@ -2126,9 +2348,12 @@
    "name": "Sheepscutt River"
   },
   "605": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     44.003,
+     -69.665
+    ]
    ],
    "name": "Wiscasset"
   },
@@ -2203,9 +2428,12 @@
    "name": "St. George"
   },
   "613": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     43.7435,
+     -70.241
+    ]
    ],
    "name": "Falmouth"
   },
@@ -2267,9 +2495,12 @@
    "name": "Western District"
   },
   "619": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     43.659,
+     -70.257
+    ]
    ],
    "name": "Maine, port unspecified"
   },
@@ -2794,9 +3025,12 @@
    "name": "Wilmington"
   },
   "682": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     39.739,
+     -75.54
+    ]
    ],
    "name": "Delaware, port unspecified"
   },
@@ -3054,7 +3288,7 @@
    "reg": 2,
    "path": [
     [
-     76.5488,
+     38.953,
      -76.5488
     ]
    ],
@@ -3391,11 +3625,11 @@
    "name": "Sussex County"
   },
   "744": {
-   "reg": 0,
+   "reg": 2,
    "path": [
     [
      37.5398,
-     75.823
+     -75.823
     ]
    ],
    "name": "Eastern Shore"
@@ -4091,11 +4325,11 @@
    "name": "Tybee Island"
   },
   "817": {
-   "reg": 0,
+   "reg": 2,
    "path": [
     [
      30.8511,
-     81.4484
+     -81.4484
     ]
    ],
    "name": "Cumberland Island,Georgia"
@@ -4821,11 +5055,11 @@
    "name": "Bayou Sara, West Feliciana Parish"
   },
   "890": {
-   "reg": 0,
+   "reg": 2,
    "path": [
     [
      31.7053,
-     91.9099
+     -91.9099
     ]
    ],
    "name": "Catahoula Parish"
@@ -4901,11 +5135,11 @@
    "name": "Hempstead County, AR"
   },
   "898": {
-   "reg": 0,
+   "reg": 2,
    "path": [
     [
      34.7304,
-     86.5861
+     -86.5861
     ]
    ],
    "name": "Huntsville, AL"
@@ -5671,9 +5905,12 @@
    "name": "New Brunswick"
   },
   "975": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     45.273,
+     -66.063
+    ]
    ],
    "name": "St. John"
   },
@@ -5738,9 +5975,12 @@
    "name": "Jefferson Barracks, MO"
   },
   "982": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     44.649,
+     -63.575
+    ]
    ],
    "name": "Canada, port unspecified"
   },
@@ -6285,11 +6525,11 @@
    "name": "Freestone County"
   },
   "1044": {
-   "reg": 0,
+   "reg": 2,
    "path": [
     [
      28.6683,
-     97.3883
+     -97.3883
     ]
    ],
    "name": "Goliad"
@@ -6365,21 +6605,21 @@
    "name": "Port Lavaca"
   },
   "1052": {
-   "reg": 0,
+   "reg": 2,
    "path": [
     [
      31.2153,
-     -965.9833
+     -95.9833
     ]
    ],
    "name": "Leon County"
   },
   "1053": {
-   "reg": 0,
+   "reg": 2,
    "path": [
     [
      30.4191,
-     97.0117
+     -97.0117
     ]
    ],
    "name": "Lexington"
@@ -6725,11 +6965,11 @@
    "name": "Ponce"
   },
   "1112": {
-   "reg": 0,
+   "reg": 2,
    "path": [
     [
      17.9841,
-     66.1138
+     -66.1138
     ]
    ],
    "name": "Guayama"
@@ -8595,11 +8835,11 @@
    "name": "Cap Tiberon"
   },
   "1302": {
-   "reg": 0,
+   "reg": 2,
    "path": [
     [
      19.45115,
-     72.680158
+     -72.680158
     ]
    ],
    "name": "Gona\u00efve"
@@ -8838,8 +9078,8 @@
    "reg": 2,
    "path": [
     [
-     18.54,
-     -79.93
+     18.536389,
+     -73.977778
     ]
    ],
    "name": "Fond-d'Icaques"
@@ -9146,8 +9386,8 @@
    "reg": 2,
    "path": [
     [
-     15.641117,
-     -75.633932
+     8.16294,
+     -77.05417
     ]
    ],
    "name": "Darien"
@@ -9383,16 +9623,22 @@
    "name": "Rio de la Plata, port unspecified"
   },
   "1397": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     -12.056,
+     -77.118
+    ]
    ],
    "name": "Lima"
   },
   "1399": {
-   "reg": -1,
+   "reg": 2,
    "path": [
-    null
+    [
+     -12.056,
+     -77.118
+    ]
    ],
    "name": "Peru, port unspecified"
   },
@@ -9527,11 +9773,11 @@
    "name": "S\u00e3o Luis"
   },
   "1413": {
-   "reg": 0,
+   "reg": 2,
    "path": [
     [
-     4.5612,
-     37.7689
+     -4.5612,
+     -37.7689
     ]
    ],
    "name": "Aracaty"
@@ -11080,8 +11326,8 @@
    "reg": 2,
    "path": [
     [
-     13.191667,
-     -8.424166
+     8.424166,
+     -13.191667
     ]
    ],
    "name": "Charlotte"
@@ -11227,11 +11473,11 @@
    "name": "Kissy and Wellington"
   },
   "1617": {
-   "reg": 1,
+   "reg": 2,
    "path": [
     [
      8.427561,
-     13.285784
+     -13.285784
     ]
    ],
    "name": "Goderich"
@@ -13161,7 +13407,7 @@
    "path": [
     [
      -7.9467,
-     14.355
+     -14.355
     ]
    ],
    "name": "Ascension Island"
@@ -13190,8 +13436,8 @@
    "reg": 1,
    "path": [
     [
-     12.805306,
-     -6.035625
+     -6.035625,
+     12.805306
     ]
    ],
    "name": "Ponta da Lenha, Congo River"
@@ -13220,8 +13466,8 @@
    "reg": 0,
    "path": [
     [
-     -17.14,
-     39.51
+     -12.33761,
+     40.59913
     ]
    ],
    "name": "Cabo Delgado"
@@ -13330,8 +13576,8 @@
    "reg": 0,
    "path": [
     [
-     -17.14,
-     39.51
+     -25.02253,
+     46.98536
     ]
    ],
    "name": "Port Dauphin"
@@ -13340,8 +13586,8 @@
    "reg": 0,
    "path": [
     [
-     -17.14,
-     39.51
+     -16.89442,
+     49.90594
     ]
    ],
    "name": "St. Mary's Island"
@@ -13350,8 +13596,8 @@
    "reg": 0,
    "path": [
     [
-     -17.14,
-     39.51
+     -23.35161,
+     43.68549
     ]
    ],
    "name": "Tulia"
@@ -13370,8 +13616,8 @@
    "reg": 0,
    "path": [
     [
-     -17.14,
-     39.51
+     -6.16519,
+     39.19891
     ]
    ],
    "name": "Momboza or Zanzibar"
@@ -13390,8 +13636,8 @@
    "reg": 0,
    "path": [
     [
-     -17.14,
-     39.51
+     -5.03193,
+     39.77555
     ]
    ],
    "name": "Pomba, Monfia"
@@ -13420,8 +13666,8 @@
    "reg": 0,
    "path": [
     [
-     -17.14,
-     39.51
+     -18.76694,
+     46.8691
     ]
    ],
    "name": "St. Lawrence"
@@ -13450,8 +13696,8 @@
    "reg": 0,
    "path": [
     [
-     -17.14,
-     39.51
+     -21.1,
+     55.6
     ]
    ],
    "name": "Bourbon"
@@ -13470,8 +13716,8 @@
    "reg": 0,
    "path": [
     [
-     -17.14,
-     39.51
+     -20.16089,
+     57.50122
     ]
    ],
    "name": "Port-Louis"
@@ -13490,8 +13736,8 @@
    "reg": 0,
    "path": [
     [
-     -17.14,
-     39.51
+     -20.3,
+     57.58333
     ]
    ],
    "name": "Mauritius (Ile de France)"
@@ -13800,26 +14046,32 @@
    "name": "British Americas, port unspecified"
   },
   "1954": {
-   "reg": 2,
+   "reg": 0,
    "path": [
     [
-     18.45,
-     -77.45
+     21.6457,
+     87.99945
     ]
    ],
    "name": "Bengal"
   },
   "1944": {
-   "reg": -1,
+   "reg": 0,
    "path": [
-    null
+    [
+     15.50095,
+     73.82939
+    ]
    ],
    "name": "Goa"
   },
   "1955": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     22.57435,
+     88.36287
+    ]
    ],
    "name": "Calcutta"
   },
@@ -13834,135 +14086,192 @@
    "name": "Basse Indres"
   },
   "1983": {
-   "reg": -1,
+   "reg": 0,
    "path": [
-    null
+    [
+     8.08876,
+     77.53383
+    ]
    ],
    "name": "India, port unspecified"
   },
   "2052": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "British plantations"
   },
   "2053": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Non-British"
   },
   "2054": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Captured by WIC"
   },
   "2055": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Captured interloper"
   },
   "2056": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Prize (unknown place)"
   },
   "2057": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Prize (taken from Dutch)"
   },
   "2058": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Prize (taken from French)"
   },
   "2059": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Prize (taken from Spanish)"
   },
   "2060": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Sold at sea to another vessel"
   },
   "2061": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Wreck"
   },
   "2062": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Slaves rescued at sea from a shipwreck"
   },
   "2063": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Prize (taken from Portuguese)"
   },
   "2064": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Prize (taken from USA)"
   },
   "2065": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Taken at sea from pirates"
   },
   "2066": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Seized at sea by Spanish officials"
   },
   "2067": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Iberian World, port unspecified"
   },
   "2069": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Other, non Geographical"
   },
   "2070": {
-   "reg": -1,
+   "reg": 1,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "???"
   }
@@ -14169,23 +14478,32 @@
    "name": "Great Britain, port unspecified"
   },
   "195": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     52.7222,
+     -4.0556
+    ]
    ],
    "name": "Barmouth"
   },
   "196": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     51.0167,
+     -4.2083
+    ]
    ],
    "name": "Bideford"
   },
   "197": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     53.3934,
+     -3.0148
+    ]
    ],
    "name": "Birkenhead"
   },
@@ -14200,9 +14518,12 @@
    "name": "Bristol"
   },
   "199": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     50.3947,
+     -3.515
+    ]
    ],
    "name": "Brixham"
   },
@@ -14217,16 +14538,22 @@
    "name": "Broadstairs"
   },
   "201": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     50.3311,
+     -4.2006
+    ]
    ],
    "name": "Cawsand"
   },
   "202": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     51.6418,
+     -2.6738
+    ]
    ],
    "name": "Chepstow"
   },
@@ -14271,9 +14598,12 @@
    "name": "Dartmouth"
   },
   "207": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     51.4793,
+     -0.026
+    ]
    ],
    "name": "Deptford"
   },
@@ -14308,23 +14638,32 @@
    "name": "Folkstone"
   },
   "211": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     53.295,
+     -2.725
+    ]
    ],
    "name": "Frodsham"
   },
   "212": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     53.3985,
+     -0.7744
+    ]
    ],
    "name": "Gainsborough"
   },
   "213": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     51.4826,
+     -0.0077
+    ]
    ],
    "name": "Greenwich"
   },
@@ -14339,9 +14678,12 @@
    "name": "Guernsey"
   },
   "215": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     51.9417,
+     1.285
+    ]
    ],
    "name": "Harwich"
   },
@@ -14356,9 +14698,12 @@
    "name": "Hull"
   },
   "217": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     51.2087,
+     -4.1201
+    ]
    ],
    "name": "Ilfracombe"
   },
@@ -14373,23 +14718,32 @@
    "name": "Ipswich"
   },
   "219": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     54.15,
+     -4.48
+    ]
    ],
    "name": "Isle of Man"
   },
   "220": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     50.762,
+     -1.298
+    ]
    ],
    "name": "Isle of Wight"
   },
   "221": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     49.1858,
+     -2.11
+    ]
    ],
    "name": "Jersey"
   },
@@ -14404,9 +14758,12 @@
    "name": "Kendal"
   },
   "223": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     52.7543,
+     0.3976
+    ]
    ],
    "name": "King's Lynn"
   },
@@ -14421,9 +14778,12 @@
    "name": "Lancaster"
   },
   "225": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     54.21,
+     -2.895
+    ]
    ],
    "name": "Lindale"
   },
@@ -14458,9 +14818,12 @@
    "name": "Lyme"
   },
   "230": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     54.7136,
+     -3.495
+    ]
    ],
    "name": "Maryport"
   },
@@ -14495,30 +14858,42 @@
    "name": "Newcastle upon Tyne"
   },
   "234": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     51.805,
+     -2.45
+    ]
    ],
    "name": "Newnham"
   },
   "235": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     55.009,
+     -1.448
+    ]
    ],
    "name": "North Shields"
   },
   "236": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     51.039,
+     -4.215
+    ]
    ],
    "name": "Northam"
   },
   "237": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     52.6309,
+     1.2974
+    ]
    ],
    "name": "Norwich"
   },
@@ -14543,9 +14918,12 @@
    "name": "Parkgate"
   },
   "240": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     54.063,
+     -3.173
+    ]
    ],
    "name": "Piel of Foulney"
   },
@@ -14570,9 +14948,12 @@
    "name": "Poole"
   },
   "243": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     50.798,
+     -1.091
+    ]
    ],
    "name": "Portsery"
   },
@@ -14607,16 +14988,22 @@
    "name": "Preston"
   },
   "247": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     51.336,
+     1.416
+    ]
    ],
    "name": "Ramsgate"
   },
   "248": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     54.355,
+     -3.409
+    ]
    ],
    "name": "Ravenglass"
   },
@@ -14631,44 +15018,62 @@
    "name": "River Thames"
   },
   "250": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     51.388,
+     0.507
+    ]
    ],
    "name": "Rochester"
   },
   "251": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     51.501,
+     -0.052
+    ]
    ],
    "name": "Rotherhithe"
   },
   "252": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     50.95,
+     0.734
+    ]
    ],
    "name": "Rye"
   },
   "253": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     54.283,
+     -0.399
+    ]
    ],
    "name": "Scarborough"
   },
   "254": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     51.441,
+     0.76
+    ]
    ],
    "name": "Sheerness"
   },
   "255": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     54.999,
+     -1.432
+    ]
    ],
    "name": "Shields"
   },
@@ -14683,9 +15088,12 @@
    "name": "Shoreham"
   },
   "257": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     50.678,
+     -3.239
+    ]
    ],
    "name": "Sidmouth"
   },
@@ -14710,23 +15118,32 @@
    "name": "Stockton"
   },
   "261": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     53.44,
+     -0.816
+    ]
    ],
    "name": "Stockwithe"
   },
   "262": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     54.906,
+     -1.381
+    ]
    ],
    "name": "Sunderland"
   },
   "263": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     50.547,
+     -3.496
+    ]
    ],
    "name": "Teignmouth"
   },
@@ -14741,9 +15158,12 @@
    "name": "Topsham"
   },
   "265": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     50.461,
+     -3.525
+    ]
    ],
    "name": "Torbay"
   },
@@ -14778,9 +15198,12 @@
    "name": "Whitehaven"
   },
   "270": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     54.643,
+     -3.547
+    ]
    ],
    "name": "Workington"
   },
@@ -14795,16 +15218,22 @@
    "name": "Yarmouth"
   },
   "272": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     51.953,
+     -7.85
+    ]
    ],
    "name": "Youghal"
   },
   "273": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     53.28,
+     -3.829
+    ]
    ],
    "name": "Conway"
   },
@@ -14849,23 +15278,32 @@
    "name": "England, port unspecified"
   },
   "293": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     56.07,
+     -3.772
+    ]
    ],
    "name": "Airth"
   },
   "294": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     56.017,
+     -3.608
+    ]
    ],
    "name": "Borrowstounness"
   },
   "295": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     56.462,
+     -2.971
+    ]
    ],
    "name": "Dundee"
   },
@@ -14900,9 +15338,12 @@
    "name": "Leith"
   },
   "299": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     54.615,
+     -6.42
+    ]
    ],
    "name": "Lough Neagh"
   },
@@ -14917,23 +15358,32 @@
    "name": "Montrose"
   },
   "301": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     57.68,
+     -4.035
+    ]
    ],
    "name": "Ross"
   },
   "302": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     55.635,
+     -4.788
+    ]
    ],
    "name": "Saltcoats"
   },
   "303": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     56.217,
+     -2.93
+    ]
    ],
    "name": "Largo, Fifeshire"
   },
@@ -14948,9 +15398,12 @@
    "name": "Dumfries"
   },
   "305": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     55.848,
+     -6.107
+    ]
    ],
    "name": "Point Askaig"
   },
@@ -14975,9 +15428,12 @@
    "name": "Portpatrick"
   },
   "308": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     55.612,
+     -4.669
+    ]
    ],
    "name": "Erwin"
   },
@@ -15042,9 +15498,12 @@
    "name": "Dublin"
   },
   "331": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     52.088,
+     -7.625
+    ]
    ],
    "name": "Dungarvan"
   },
@@ -15079,9 +15538,12 @@
    "name": "Limerick"
   },
   "335": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     54.997,
+     -7.309
+    ]
    ],
    "name": "Londonderry"
   },
@@ -15096,9 +15558,12 @@
    "name": "Ringsend"
   },
   "337": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     54.37,
+     -5.556
+    ]
    ],
    "name": "Strangford"
   },
@@ -15113,9 +15578,12 @@
    "name": "Waterford"
   },
   "339": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     52.336,
+     -6.463
+    ]
    ],
    "name": "Wexford"
   },
@@ -15140,9 +15608,12 @@
    "name": "Coleraine"
   },
   "346": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     53.344,
+     -6.267
+    ]
    ],
    "name": "Ireland, port unspecified"
   },
@@ -15177,11 +15648,11 @@
    "name": "Brest"
   },
   "350": {
-   "reg": 9,
+   "reg": 8,
    "path": [
     [
-     45.745724,
-     1.70685
+     50.95129,
+     1.858686
     ]
    ],
    "name": "Calais"
@@ -15737,9 +16208,12 @@
    "name": "Gl\u00fcckstadt"
   },
   "530": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     53.545,
+     9.966
+    ]
    ],
    "name": "Northern Germany - port unspecified"
   },
@@ -15754,9 +16228,12 @@
    "name": "Antwerp"
   },
   "532": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     51.23,
+     2.92
+    ]
    ],
    "name": "Flanders"
   },
@@ -15791,16 +16268,22 @@
    "name": "T\u00f8nsberg"
   },
   "542": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     60.393,
+     5.324
+    ]
    ],
    "name": "Bergen"
   },
   "547": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     59.91,
+     10.75
+    ]
    ],
    "name": "Norway, port unspecified"
   },
@@ -15815,16 +16298,22 @@
    "name": "G\u00f6teborg"
   },
   "557": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     57.707,
+     11.967
+    ]
    ],
    "name": "Sweden, port unspecified"
   },
   "558": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     44.405,
+     8.933
+    ]
    ],
    "name": "Genova"
   },
@@ -15849,16 +16338,22 @@
    "name": "Trieste"
   },
   "563": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     43.548,
+     10.31
+    ]
    ],
    "name": "Italy, port unspecified"
   },
   "564": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     59.99,
+     29.77
+    ]
    ],
    "name": "Kronstadt"
   },
@@ -15873,16 +16368,22 @@
    "name": "Odessa"
   },
   "566": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     59.934,
+     30.306
+    ]
    ],
    "name": "Russia, port unspecified"
   },
   "567": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     39.215,
+     9.11
+    ]
    ],
    "name": "Sardinia"
   },
@@ -16004,44 +16505,62 @@
    "name": "Rhode Island, port unspecified"
   },
   "592": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     43.911,
+     -69.82
+    ]
    ],
    "name": "Bath"
   },
   "593": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     43.265,
+     -70.864
+    ]
    ],
    "name": "Berwick"
   },
   "594": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     43.493,
+     -70.453
+    ]
    ],
    "name": "Biddeford"
   },
   "595": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     45.184,
+     -67.277
+    ]
    ],
    "name": "Calais (Maine)"
   },
   "596": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     44.21,
+     -69.065
+    ]
    ],
    "name": "Camden"
   },
   "598": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     43.857,
+     -70.103
+    ]
    ],
    "name": "Freeport"
   },
@@ -16056,30 +16575,42 @@
    "name": "Portland"
   },
   "600": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     44.556,
+     -68.86
+    ]
    ],
    "name": "Prospect"
   },
   "601": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     44.087,
+     -69.799
+    ]
    ],
    "name": "Richmond"
   },
   "602": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     45.064,
+     -67.127
+    ]
    ],
    "name": "Robbinston"
   },
   "603": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     44.104,
+     -69.109
+    ]
    ],
    "name": "Rockland"
   },
@@ -16094,9 +16625,12 @@
    "name": "Sheepscutt River"
   },
   "605": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     44.003,
+     -69.665
+    ]
    ],
    "name": "Wiscasset"
   },
@@ -16171,9 +16705,12 @@
    "name": "St. George"
   },
   "613": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     43.7435,
+     -70.241
+    ]
    ],
    "name": "Falmouth"
   },
@@ -16235,9 +16772,12 @@
    "name": "Western District"
   },
   "619": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     43.659,
+     -70.257
+    ]
    ],
    "name": "Maine, port unspecified"
   },
@@ -16762,9 +17302,12 @@
    "name": "Wilmington"
   },
   "682": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     39.739,
+     -75.54
+    ]
    ],
    "name": "Delaware, port unspecified"
   },
@@ -17022,7 +17565,7 @@
    "reg": 8,
    "path": [
     [
-     76.5488,
+     38.953,
      -76.5488
     ]
    ],
@@ -17359,11 +17902,11 @@
    "name": "Sussex County"
   },
   "744": {
-   "reg": 9,
+   "reg": 8,
    "path": [
     [
      37.5398,
-     75.823
+     -75.823
     ]
    ],
    "name": "Eastern Shore"
@@ -18059,11 +18602,11 @@
    "name": "Tybee Island"
   },
   "817": {
-   "reg": 9,
+   "reg": 4,
    "path": [
     [
      30.8511,
-     81.4484
+     -81.4484
     ]
    ],
    "name": "Cumberland Island,Georgia"
@@ -18789,11 +19332,11 @@
    "name": "Bayou Sara, West Feliciana Parish"
   },
   "890": {
-   "reg": 9,
+   "reg": 4,
    "path": [
     [
      31.7053,
-     91.9099
+     -91.9099
     ]
    ],
    "name": "Catahoula Parish"
@@ -18869,11 +19412,11 @@
    "name": "Hempstead County, AR"
   },
   "898": {
-   "reg": 9,
+   "reg": 4,
    "path": [
     [
      34.7304,
-     86.5861
+     -86.5861
     ]
    ],
    "name": "Huntsville, AL"
@@ -19639,9 +20182,12 @@
    "name": "New Brunswick"
   },
   "975": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     45.273,
+     -66.063
+    ]
    ],
    "name": "St. John"
   },
@@ -19706,9 +20252,12 @@
    "name": "Jefferson Barracks, MO"
   },
   "982": {
-   "reg": -1,
+   "reg": 8,
    "path": [
-    null
+    [
+     44.649,
+     -63.575
+    ]
    ],
    "name": "Canada, port unspecified"
   },
@@ -20253,11 +20802,11 @@
    "name": "Freestone County"
   },
   "1044": {
-   "reg": 9,
+   "reg": 5,
    "path": [
     [
      28.6683,
-     97.3883
+     -97.3883
     ]
    ],
    "name": "Goliad"
@@ -20333,21 +20882,21 @@
    "name": "Port Lavaca"
   },
   "1052": {
-   "reg": 8,
+   "reg": 4,
    "path": [
     [
      31.2153,
-     -965.9833
+     -95.9833
     ]
    ],
    "name": "Leon County"
   },
   "1053": {
-   "reg": 9,
+   "reg": 5,
    "path": [
     [
      30.4191,
-     97.0117
+     -97.0117
     ]
    ],
    "name": "Lexington"
@@ -20693,11 +21242,11 @@
    "name": "Ponce"
   },
   "1112": {
-   "reg": 9,
+   "reg": 4,
    "path": [
     [
      17.9841,
-     66.1138
+     -66.1138
     ]
    ],
    "name": "Guayama"
@@ -22563,11 +23112,11 @@
    "name": "Cap Tiberon"
   },
   "1302": {
-   "reg": 9,
+   "reg": 5,
    "path": [
     [
      19.45115,
-     72.680158
+     -72.680158
     ]
    ],
    "name": "Gona\u00efve"
@@ -22806,8 +23355,8 @@
    "reg": 5,
    "path": [
     [
-     18.54,
-     -79.93
+     18.536389,
+     -73.977778
     ]
    ],
    "name": "Fond-d'Icaques"
@@ -23114,8 +23663,8 @@
    "reg": 5,
    "path": [
     [
-     15.641117,
-     -75.633932
+     8.16294,
+     -77.05417
     ]
    ],
    "name": "Darien"
@@ -23351,16 +23900,22 @@
    "name": "Rio de la Plata, port unspecified"
   },
   "1397": {
-   "reg": -1,
+   "reg": 5,
    "path": [
-    null
+    [
+     -12.056,
+     -77.118
+    ]
    ],
    "name": "Lima"
   },
   "1399": {
-   "reg": -1,
+   "reg": 5,
    "path": [
-    null
+    [
+     -12.056,
+     -77.118
+    ]
    ],
    "name": "Peru, port unspecified"
   },
@@ -23495,11 +24050,11 @@
    "name": "S\u00e3o Luis"
   },
   "1413": {
-   "reg": 9,
+   "reg": 6,
    "path": [
     [
-     4.5612,
-     37.7689
+     -4.5612,
+     -37.7689
     ]
    ],
    "name": "Aracaty"
@@ -25048,8 +25603,8 @@
    "reg": 9,
    "path": [
     [
-     13.191667,
-     -8.424166
+     8.424166,
+     -13.191667
     ]
    ],
    "name": "Charlotte"
@@ -25199,7 +25754,7 @@
    "path": [
     [
      8.427561,
-     13.285784
+     -13.285784
     ]
    ],
    "name": "Goderich"
@@ -27129,7 +27684,7 @@
    "path": [
     [
      -7.9467,
-     14.355
+     -14.355
     ]
    ],
    "name": "Ascension Island"
@@ -27158,8 +27713,8 @@
    "reg": 9,
    "path": [
     [
-     12.805306,
-     -6.035625
+     -6.035625,
+     12.805306
     ]
    ],
    "name": "Ponta da Lenha, Congo River"
@@ -27188,8 +27743,8 @@
    "reg": 9,
    "path": [
     [
-     -17.14,
-     39.51
+     -12.33761,
+     40.59913
     ]
    ],
    "name": "Cabo Delgado"
@@ -27298,8 +27853,8 @@
    "reg": 9,
    "path": [
     [
-     -17.14,
-     39.51
+     -25.02253,
+     46.98536
     ]
    ],
    "name": "Port Dauphin"
@@ -27308,8 +27863,8 @@
    "reg": 9,
    "path": [
     [
-     -17.14,
-     39.51
+     -16.89442,
+     49.90594
     ]
    ],
    "name": "St. Mary's Island"
@@ -27318,8 +27873,8 @@
    "reg": 9,
    "path": [
     [
-     -17.14,
-     39.51
+     -23.35161,
+     43.68549
     ]
    ],
    "name": "Tulia"
@@ -27338,8 +27893,8 @@
    "reg": 9,
    "path": [
     [
-     -17.14,
-     39.51
+     -6.16519,
+     39.19891
     ]
    ],
    "name": "Momboza or Zanzibar"
@@ -27358,8 +27913,8 @@
    "reg": 9,
    "path": [
     [
-     -17.14,
-     39.51
+     -5.03193,
+     39.77555
     ]
    ],
    "name": "Pomba, Monfia"
@@ -27388,8 +27943,8 @@
    "reg": 9,
    "path": [
     [
-     -17.14,
-     39.51
+     -18.76694,
+     46.8691
     ]
    ],
    "name": "St. Lawrence"
@@ -27418,8 +27973,8 @@
    "reg": 9,
    "path": [
     [
-     -17.14,
-     39.51
+     -21.1,
+     55.6
     ]
    ],
    "name": "Bourbon"
@@ -27438,8 +27993,8 @@
    "reg": 9,
    "path": [
     [
-     -17.14,
-     39.51
+     -20.16089,
+     57.50122
     ]
    ],
    "name": "Port-Louis"
@@ -27458,8 +28013,8 @@
    "reg": 9,
    "path": [
     [
-     -17.14,
-     39.51
+     -20.3,
+     57.58333
     ]
    ],
    "name": "Mauritius (Ile de France)"
@@ -27768,26 +28323,32 @@
    "name": "British Americas, port unspecified"
   },
   "1954": {
-   "reg": 5,
+   "reg": 9,
    "path": [
     [
-     18.45,
-     -77.45
+     21.6457,
+     87.99945
     ]
    ],
    "name": "Bengal"
   },
   "1944": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     15.50095,
+     73.82939
+    ]
    ],
    "name": "Goa"
   },
   "1955": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     22.57435,
+     88.36287
+    ]
    ],
    "name": "Calcutta"
   },
@@ -27802,135 +28363,192 @@
    "name": "Basse Indres"
   },
   "1983": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     8.08876,
+     77.53383
+    ]
    ],
    "name": "India, port unspecified"
   },
   "2052": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "British plantations"
   },
   "2053": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Non-British"
   },
   "2054": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Captured by WIC"
   },
   "2055": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Captured interloper"
   },
   "2056": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Prize (unknown place)"
   },
   "2057": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Prize (taken from Dutch)"
   },
   "2058": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Prize (taken from French)"
   },
   "2059": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Prize (taken from Spanish)"
   },
   "2060": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Sold at sea to another vessel"
   },
   "2061": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Wreck"
   },
   "2062": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Slaves rescued at sea from a shipwreck"
   },
   "2063": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Prize (taken from Portuguese)"
   },
   "2064": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Prize (taken from USA)"
   },
   "2065": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Taken at sea from pirates"
   },
   "2066": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Seized at sea by Spanish officials"
   },
   "2067": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Iberian World, port unspecified"
   },
   "2069": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "Other, non Geographical"
   },
   "2070": {
-   "reg": -1,
+   "reg": 9,
    "path": [
-    null
+    [
+     -13.1940596,
+     -20.0982627
+    ]
    ],
    "name": "???"
   }
