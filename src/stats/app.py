@@ -102,8 +102,8 @@ def load_long_df(endpoint,variables):
 	return(df)
 
 registered_caches=[
-	big_df,
-	estimate_pivot_tables,
+# 	big_df,
+# 	estimate_pivot_tables,
 	timelapse
 ]
 
