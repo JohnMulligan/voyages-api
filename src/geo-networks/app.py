@@ -47,6 +47,7 @@ def rebuild_pickles():
 			linklabels=rc['indices']['linklabels']
 			nodelabels=rc['indices']['nodelabels']
 			graph_idx=rc['indices'][graphname]
+			filter=rc['filter']
 			pk_var=graph_idx['pk']
 			itinerary_vars=graph_idx['itinerary']
 			weight_vars=graph_idx['weight']
@@ -59,7 +60,8 @@ def rebuild_pickles():
 				weight_vars,
 				linklabels,
 				nodelabels,
-				rebuilder_number_of_workers=rebuilder_number_of_workers
+				rebuilder_number_of_workers=rebuilder_number_of_workers,
+				filter=filter
 			)
 			with open(picklefilepath, 'wb') as f:
 				pickle.dump(graph_index, f, pickle.HIGHEST_PROTOCOL)
@@ -93,9 +95,9 @@ def load_index(rcname,graphname):
 
 #SEE INDEX_VARS.PY FOR THE MAPPINGS OF THE DJANGO API FIELDS TO THE DATA DICTIONARIES USED BY THIS APP
 registered_caches={
-	'ao_maps':ao_maps,
-	'voyage_maps':voyage_maps,
-	'estimate_maps':estimate_maps
+	'to_barbados':to_barbados,
+	'from_barbados':from_barbados
+
 }
 
 rcnames=list(registered_caches.keys())

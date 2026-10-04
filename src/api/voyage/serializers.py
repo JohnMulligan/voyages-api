@@ -713,6 +713,7 @@ class VoyageAggRoutesRequestSerializer(serializers.Serializer):
 	zoomlevel=serializers.ChoiceField(choices=(('region','region'),('place','place')))
 	filter=VoyageFilterItemSerializer(many=True,required=False)
 	global_search=serializers.CharField(required=False)
+	cachename=serializers.CharField(required=False)
 
 class VoyageAggRoutesEdgesSerializer(serializers.Serializer):
 	source=serializers.CharField()

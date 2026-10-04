@@ -610,6 +610,7 @@ class VoyageAggRoutes(generics.GenericAPIView):
 		#HAND OFF TO THE FLASK CONTAINER
 		results=results.order_by('id')
 		zoomlevel=params.get('zoomlevel','region')
+		cachename=params.get('cachename','to_barbados')
 		values_list=results.values_list('id')
 		pks=[v[0] for v in values_list]
 		django_query_time=time.time()
@@ -617,7 +618,7 @@ class VoyageAggRoutes(generics.GenericAPIView):
 		u2=GEO_NETWORKS_BASE_URL+'network_maps/'
 		d2={
 			'graphname':zoomlevel,
-			'cachename':'voyage_maps',
+			'cachename':cachename,
 			'pks':pks
 		}
 		r=requests.post(url=u2,data=json.dumps(d2),headers={"Content-type":"application/json"})

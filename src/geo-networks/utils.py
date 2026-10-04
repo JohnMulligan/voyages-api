@@ -98,7 +98,8 @@ def connect_to_tags(G,this_tag,tag_connections):
 						s_id=comp_node_id
 						t_id=n_id
 					G.add_edge(s_id,t_id,id=e,distance=distance,tags=[concat_tag])
-					e+=1		
+					e+=1
+			print(thisnode,s_id,t_id,distance)
 	print("ending graph state",G)
 	print("-------------")
 	return G
@@ -124,9 +125,8 @@ def add_non_oceanic_nodes(G,endpoint,graph_params,filter_obj,init_node_id=0):
 			
 			## MAKE SURE YOU APPLY THE FILTER TO THE QUERY
 			### E.G., ARE WE AFTER TRANSATLANTIC OR INTRA-AMERICAN VOYAGES?
-			payload['filter']=[]
-			for f in filter_obj:
-				payload['filter'][f]=filter_obj[f]
+			if filter_obj:
+				payload['filter']=filter_obj
 			
 			print(headers,payload)
 			## MAKE A DATAFRAME CALL ON ALL THE VARIABLES ENUMERATED FOR THIS NODE
@@ -206,9 +206,13 @@ def add_oceanic_network(G,oceanic_network,init_node_id=0):
 		ntags=G.nodes[n_id]['tags']
 		successors=[o for o in G.successors(n_id)]
 		predecessors=[o for o in G.predecessors(n_id)]
-		if len(successors)>0:
+# 		if len(successors)>0:
+# 			ntags.append('onramp')
+# 		if len(predecessors)>0:			
+# 			ntags.append('offramp')
+		if len(predecessors)==0:
 			ntags.append('onramp')
-		if len(predecessors)>0:			
+		if len(successors)==0:			
 			ntags.append('offramp')
 		G.nodes[n_id]['tags']=ntags
 	max_node_id=max(oceanic_node_ids)
@@ -621,7 +625,7 @@ def get_map_data(payload):
 					print("---\nNO PATH")
 					print("from",amatch,graph.nodes[amatch])
 					print("to",bmatch,graph.nodes[bmatch]," -- drawing straight line.\n---")
-				
+# 				
 			
 				#retrieve the uuid's where applicable
 				sp_export=[graph.nodes[x]['uuid'] if 'uuid' in graph.nodes[x] else x for x in list(sp)]
@@ -725,7 +729,7 @@ def get_map_data(payload):
 	
 
 
-def build_index(endpoint,graph,oceanic_subgraph_view,pk_var,itinerary_vars,weight_var,nodelabels,linklabels,rebuilder_number_of_workers=1):
+def build_index(endpoint,graph,oceanic_subgraph_view,pk_var,itinerary_vars,weight_var,nodelabels,linklabels,rebuilder_number_of_workers=1,filter=filter):
 	
 	st=time.time()
 	headers={'Authorization':DJANGO_AUTH_KEY,'Content-Type': 'application/json'}
@@ -735,7 +739,7 @@ def build_index(endpoint,graph,oceanic_subgraph_view,pk_var,itinerary_vars,weigh
 	else:
 		selected_fields=[pk_var]+itinerary_vars
 	
-	payload={'selected_fields':selected_fields,'filter':[]}
+	payload={'selected_fields':selected_fields,'filter':filter}
 	
 	r=requests.post(
 		url=DJANGO_BASE_URL+endpoint,
