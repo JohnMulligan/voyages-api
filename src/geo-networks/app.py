@@ -43,13 +43,15 @@ def rebuild_pickles():
 			
 			picklefilepath=f'{TMP_PATH}/{rcname}__{graphname}.pickle'
 			
-			graph,oceanic_subgraph_view,graphname=load_graph(dataframe_endpoint,graph_params,rc)
+			graph,oceanic_subgraph_view,graphname,swap_trigger_uuids=load_graph(dataframe_endpoint,graph_params,rc)
 			linklabels=rc['indices']['linklabels']
 			nodelabels=rc['indices']['nodelabels']
 			graph_idx=rc['indices'][graphname]
 			filter=rc['filter']
 			pk_var=graph_idx['pk']
 			itinerary_vars=graph_idx['itinerary']
+			swap_itinerary=graph_idx.get('swap_itinerary')
+				
 			weight_vars=graph_idx['weight']
 			graph_index=build_index(
 				dataframe_endpoint,
@@ -61,7 +63,9 @@ def rebuild_pickles():
 				linklabels,
 				nodelabels,
 				rebuilder_number_of_workers=rebuilder_number_of_workers,
-				filter=filter
+				filter=filter,
+				swap_trigger_uuids=swap_trigger_uuids,
+				swap_itinerary=swap_itinerary
 			)
 			with open(picklefilepath, 'wb') as f:
 				pickle.dump(graph_index, f, pickle.HIGHEST_PROTOCOL)

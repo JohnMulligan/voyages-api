@@ -30,7 +30,7 @@ def load_graph(endpoint,graph_params,rc):
 		# THEN ITERATE OVER THE GEO VARS IN THE INDEX
 		## AND ADD THE RESULTING UNIQUE NODES TO THE NETWORK
 		filter_obj=rc['filter']
-		G,max_node_id=add_non_oceanic_nodes(G,endpoint,graph_params,filter_obj,init_node_id=max_node_id+1)
+		G,max_node_id,swap_trigger_uuids=add_non_oceanic_nodes(G,endpoint,graph_params,filter_obj,init_node_id=max_node_id+1)
 		print("added non-oceanic network nodes")
 		#then link across the ordered node classes
 		ordered_node_classes=graph_params['ordered_node_classes']
@@ -49,7 +49,7 @@ def load_graph(endpoint,graph_params,rc):
 				return False
 
 		oceanic_subgraph_view=nx.subgraph_view(G,filter_edge=oceanic_edge_filter)
-	return G,oceanic_subgraph_view,graphname
+	return G,oceanic_subgraph_view,graphname,swap_trigger_uuids
 
 
 def geteuclideandistance(Ay,Ax,By,Bx):
@@ -99,13 +99,15 @@ def connect_to_tags(G,this_tag,tag_connections):
 						t_id=n_id
 					G.add_edge(s_id,t_id,id=e,distance=distance,tags=[concat_tag])
 					e+=1
-			print(thisnode,s_id,t_id,distance)
+# 			print(thisnode,s_id,t_id,distance)s
 	print("ending graph state",G)
 	print("-------------")
 	return G
 
 def add_non_oceanic_nodes(G,endpoint,graph_params,filter_obj,init_node_id=0):
 	graph_name=graph_params['name']
+	swap_trigger_vals=graph_params.get('swap_trigger_vals')
+	swap_trigger_uuids=[]
 	node_id=init_node_id
 	headers={'Authorization':DJANGO_AUTH_KEY,'Content-Type': 'application/json'}
 	ordered_node_classes=graph_params['ordered_node_classes']
@@ -156,6 +158,22 @@ def add_non_oceanic_nodes(G,endpoint,graph_params,filter_obj,init_node_id=0):
 				if 'lat' in att_dict and 'lon' in att_dict:
 					lat=att_dict['lat']
 					lon=att_dict['lon']
+					if swap_trigger_vals:
+						val=att_dict['val']
+						if val in swap_trigger_vals:
+							swap_dict_ks=[k for k in att_dict if k.startswith('swap_')]
+							swap_trigger_uuids.append(att_dict['uuid'])
+							print("-------")
+							for k in swap_dict_ks:
+								normal_k=re.sub("swap_","",k)
+								print(att_dict[normal_k],att_dict[k])
+								att_dict[normal_k]=att_dict[k]
+								lat=att_dict['lat']
+								lon=att_dict['lon']
+								del(att_dict[k])
+							print(att_dict)
+							print("-------")
+							
 					if lat is not None and lon is not None:
 						if (float(lat) > -.1 and float(lat) < .1) and (float(lon) > -.1 and float(lon) < .1):
 							print("BAD NODE-->",att_dict)
@@ -176,9 +194,10 @@ def add_non_oceanic_nodes(G,endpoint,graph_params,filter_obj,init_node_id=0):
 								rowdict=(node_id,att_dict)
 								G.add_nodes_from([rowdict])
 								node_id+=1
+						
 					else:
 						print("BAD NODE-->",att_dict)
-	return G,node_id
+	return G,node_id,swap_trigger_uuids
 
 def add_oceanic_network(G,oceanic_network,init_node_id=0):
 	nodes=oceanic_network['nodes']
@@ -485,7 +504,6 @@ def add_stripped_node_to_dict(graph,n_id,nodesdict):
 
 def get_map_data(payload):
 	
-# 	print(payload)
 	
 	work_item,pk_var,itinerary_vars,weight_var,graph,nodelabels,linklabels=payload
 	
@@ -729,10 +747,36 @@ def get_map_data(payload):
 	
 
 
-def build_index(endpoint,graph,oceanic_subgraph_view,pk_var,itinerary_vars,weight_var,nodelabels,linklabels,rebuilder_number_of_workers=1,filter=filter):
+def build_index(endpoint,graph,oceanic_subgraph_view,pk_var,itinerary_vars,weight_var,nodelabels,linklabels,rebuilder_number_of_workers=1,filter=filter,swap_trigger_uuids=[],swap_itinerary=None):
 	
 	st=time.time()
 	headers={'Authorization':DJANGO_AUTH_KEY,'Content-Type': 'application/json'}
+	
+	if swap_itinerary and swap_trigger_uuids:
+		swapval_fields={swap_itinerary[i]:itinerary_vars[i] for i in range(len(swap_itinerary))}
+		selected_fields=[pk_var]+swap_itinerary
+		payload={'selected_fields':selected_fields,'filter':filter}
+	
+		r=requests.post(
+			url=DJANGO_BASE_URL+endpoint,
+			headers=headers,
+			data=json.dumps(payload)
+		)
+		
+		results=json.loads(r.text)
+		rowcount=len(results[pk_var])
+# 		non_pk_ks=list(results.keys())[1:]
+		
+		swapvals_map={
+			results[pk_var][i]:{
+				swapval_fields[k]:results[k][i] for k in list(results.keys())[1:]
+			}
+			for i in range(len(results[pk_var]))
+		}
+		we_are_swapping=True
+	else:
+		we_are_swapping=False
+		swap_df=[]	
 	
 	if weight_var is not None:
 		selected_fields=[pk_var]+itinerary_vars+[weight_var]
@@ -751,8 +795,22 @@ def build_index(endpoint,graph,oceanic_subgraph_view,pk_var,itinerary_vars,weigh
 	
 	print(f"ALL RESULTS: {len(results[pk_var])}")
 	
-	results_pivoted=[[{k:results[k][i] for k in results},pk_var,itinerary_vars,weight_var,graph,linklabels,nodelabels] for i in range(len(results[pk_var]))]
-		
+	results_pivoted=[]
+	
+	if we_are_swapping:	
+		print("WE ARE SWAPPING!!!!!!")
+		for i in range(len(results[pk_var])):
+			output_row_dict={k:results[k][i] for k in results}
+			for iv in itinerary_vars:
+				if output_row_dict[iv] in swap_trigger_uuids:
+					pk_val=output_row_dict[pk_var]
+# 					print(output_row_dict,swapvals_map[pk_val])
+					output_row_dict[iv]=swapvals_map[pk_val][iv]
+			output_row=[output_row_dict,pk_var,itinerary_vars,weight_var,graph,linklabels,nodelabels]
+			results_pivoted.append(output_row)
+	else:
+		results_pivoted=[[{k:results[k][i] for k in results},pk_var,itinerary_vars,weight_var,graph,linklabels,nodelabels] for i in range(len(results[pk_var]))]
+	
 	print(f"REBUILDING WITH {rebuilder_number_of_workers} WORKERS")
 	
 	with multiprocessing.Pool(rebuilder_number_of_workers) as p:

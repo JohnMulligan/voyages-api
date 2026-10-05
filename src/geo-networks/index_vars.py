@@ -63,6 +63,7 @@ to_barbados={
 		},
 		{
 			'name':'region',
+# 			'swap_trigger_vals':[60700,60100],
 			'ordered_node_classes':[
 				{
 					'tag':'embarkation',
@@ -71,7 +72,12 @@ to_barbados={
 						'name':'voyage_itinerary__imp_principal_region_of_slave_purchase__name',
 						'lat':'voyage_itinerary__imp_principal_region_of_slave_purchase__latitude',
 						'lon':'voyage_itinerary__imp_principal_region_of_slave_purchase__longitude',
-						'val':'voyage_itinerary__imp_principal_region_of_slave_purchase__value'		
+						'val':'voyage_itinerary__imp_principal_region_of_slave_purchase__value',
+						'swap_uuid':'voyage_itinerary__imp_principal_place_of_slave_purchase__uuid',
+						'swap_name':'voyage_itinerary__imp_principal_place_of_slave_purchase__name',
+						'swap_lat':'voyage_itinerary__imp_principal_place_of_slave_purchase__latitude',
+						'swap_lon':'voyage_itinerary__imp_principal_place_of_slave_purchase__longitude',
+						'swap_val':'voyage_itinerary__imp_principal_place_of_slave_purchase__value'	
 					},
 					'tag_connections':[
 						("onramp","source","closest")
@@ -109,6 +115,10 @@ to_barbados={
 			'pk':'voyage_id',
 			'itinerary':[
 				'voyage_itinerary__imp_principal_region_of_slave_purchase__uuid',
+				'voyage_itinerary__imp_principal_region_slave_dis__uuid'
+			],
+			'swap_itinerary':[
+				'voyage_itinerary__imp_principal_place_of_slave_purchase__uuid',
 				'voyage_itinerary__imp_principal_region_slave_dis__uuid'
 			],
 			'weight':'voyage_slaves_numbers__imp_total_num_slaves_embarked'
@@ -162,7 +172,7 @@ from_barbados={
 						'name':'voyage_itinerary__imp_principal_place_of_slave_purchase__name',
 						'lat':'voyage_itinerary__imp_principal_place_of_slave_purchase__latitude',
 						'lon':'voyage_itinerary__imp_principal_place_of_slave_purchase__longitude',
-						'val':'voyage_itinerary__imp_principal_place_of_slave_purchase__value'
+						'val':'voyage_itinerary__imp_principal_place_of_slave_purchase__value',
 					},
 					'tag_connections':[
 						("onramp","source","closest")
@@ -187,6 +197,7 @@ from_barbados={
 			]
 		},
 		{
+			'swap_trigger_vals':[41200,90400,32100,37000,35500],
 			'name':'region',
 			'ordered_node_classes':[
 				{
@@ -196,7 +207,7 @@ from_barbados={
 						'name':'voyage_itinerary__imp_principal_region_of_slave_purchase__name',
 						'lat':'voyage_itinerary__imp_principal_region_of_slave_purchase__latitude',
 						'lon':'voyage_itinerary__imp_principal_region_of_slave_purchase__longitude',
-						'val':'voyage_itinerary__imp_principal_region_of_slave_purchase__value'		
+						'val':'voyage_itinerary__imp_principal_region_of_slave_purchase__value'
 					},
 					'tag_connections':[
 						("onramp","source","closest")
@@ -212,7 +223,12 @@ from_barbados={
 						'name':'voyage_itinerary__imp_principal_region_slave_dis__name',
 						'lat':'voyage_itinerary__imp_principal_region_slave_dis__latitude',
 						'lon':'voyage_itinerary__imp_principal_region_slave_dis__longitude',
-						'val':'voyage_itinerary__imp_principal_region_slave_dis__value'		
+						'val':'voyage_itinerary__imp_principal_region_slave_dis__value',
+						'swap_uuid':'voyage_itinerary__imp_principal_port_slave_dis__uuid',
+						'swap_name':'voyage_itinerary__imp_principal_port_slave_dis__name',
+						'swap_lat':'voyage_itinerary__imp_principal_port_slave_dis__latitude',
+						'swap_lon':'voyage_itinerary__imp_principal_port_slave_dis__longitude',
+						'swap_val':'voyage_itinerary__imp_principal_port_slave_dis__value'
 					},
 					'tag_connections':[
 						("offramp","target","closest")
@@ -236,6 +252,11 @@ from_barbados={
 				'voyage_itinerary__imp_principal_region_of_slave_purchase__uuid',
 				'voyage_itinerary__imp_principal_region_slave_dis__uuid'
 			],
+			'swap_itinerary':[
+				'voyage_itinerary__imp_principal_region_of_slave_purchase__uuid',
+				'voyage_itinerary__imp_principal_port_slave_dis__uuid'
+			],
+			
 			'weight':'voyage_slaves_numbers__imp_total_num_slaves_embarked'
 		},
 		'linklabels':['transportation'],
