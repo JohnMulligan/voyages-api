@@ -771,6 +771,7 @@ class VoyageFieldAggregationRequestSerializer(serializers.Serializer):
 			'number'
 		]
 	])
+	filter=serializers.ListField()
 	
 class VoyageFieldAggregationResponseSerializer(serializers.Serializer):
 	varName=serializers.ChoiceField(choices=[

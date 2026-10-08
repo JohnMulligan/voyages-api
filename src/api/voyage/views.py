@@ -183,12 +183,14 @@ class VoyageAggregations(generics.GenericAPIView):
 			reqdict=dict(serialized_req.data)
 			var_name=reqdict.get('varName')
 			filteritems=reqdict.get('filter')
-			cleanedfilteritems=[]
-			if filteritems is not None:
-				for filteritem in filteritems:
-					if var_name!=filteritem['varName']:
-						cleanedfilteritems.append(filteritem)
-			reqdict['filter']=cleanedfilteritems
+			print(reqdict)
+			print("----------------AGG FILTER",filteritems)
+# 			cleanedfilteritems=[]
+# 			if filteritems is not None:
+# 				for filteritem in filteritems:
+# 					if var_name!=filteritem['varName']:
+# 						cleanedfilteritems.append(filteritem)
+# 			reqdict['filter']=cleanedfilteritems
 			
 			results,results_count,page,page_size,error_messages=post_req(
 				queryset,
