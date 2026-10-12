@@ -81,18 +81,18 @@ class PastSourceSerializer(serializers.ModelSerializer):
 
 
 class PastVoyageOutcomesSerializer(serializers.Serializer):
-	particular_outcome=serializers.CharField(required=False)
+	particular_outcome=serializers.CharField(required=False,allow_null=True)
 	class Meta:
 		fields=['particular_outcome']
 
 class PastEnslavedVoyageSerializer(serializers.Serializer):
-	id=serializers.IntegerField(required=False)
-	embarkation=serializers.CharField(required=False)
-	disembarkation=serializers.CharField(required=False)
-	year=serializers.IntegerField(required=False)
-	month=serializers.IntegerField(required=False)
-	day=serializers.IntegerField(required=False)
-	ship_name=serializers.CharField(required=False)
+	id=serializers.IntegerField(required=False,allow_null=True)
+	embarkation=serializers.CharField(required=False,allow_null=True)
+	disembarkation=serializers.CharField(required=False,allow_null=True)
+	year=serializers.IntegerField(required=False,allow_null=True)
+	month=serializers.IntegerField(required=False,allow_null=True)
+	day=serializers.IntegerField(required=False,allow_null=True)
+	ship_name=serializers.CharField(required=False,allow_null=True)
 	outcomes=PastVoyageOutcomesSerializer(many=False,required=False,allow_null=True)
 	class Meta:
 		fields=[
@@ -176,7 +176,7 @@ class EnslavedSerializer(serializers.ModelSerializer):
 				month=date.month
 				day=date.day
 			else:
-				yearam="year unknown"
+				yearam=None
 				month=None
 				day=None
 			try:

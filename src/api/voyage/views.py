@@ -70,7 +70,8 @@ class VoyageList(generics.GenericAPIView):
 				request,
 				Voyage_options,
 				auto_prefetch=True,
-				paginate=True
+				paginate=True,
+				max_page_size=2
 			)
 			
 			if error_messages:

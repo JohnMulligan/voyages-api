@@ -82,7 +82,8 @@ class EnslavedList(generics.GenericAPIView):
 				request,
 				Enslaved_options,
 				auto_prefetch=True,
-				paginate=True
+				paginate=True,
+				max_page_size=2
 			)
 						
 			if error_messages:
@@ -207,7 +208,8 @@ class EnslaverList(generics.GenericAPIView):
 				request,
 				EnslaverIdentity_options,
 				auto_prefetch=True,
-				paginate=True
+				paginate=True,
+				max_page_size=2
 			)
 			
 			if error_messages:

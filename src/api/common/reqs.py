@@ -189,7 +189,7 @@ def sort_queryset(filtered_queryset,params,all_fields):
 	return filtered_queryset
 
 
-def post_req(orig_queryset,s,r,options_dict,auto_prefetch=True,paginate=False):
+def post_req(orig_queryset,s,r,options_dict,auto_prefetch=True,paginate=False,max_page_size=None):
 	'''
 		This function handles:
 		1. ensuring that all the fields that will be called are valid on the model
@@ -414,6 +414,8 @@ def post_req(orig_queryset,s,r,options_dict,auto_prefetch=True,paginate=False):
 	st=time.time()
 	if paginate:
 		page_size=int(params.get('page_size',10))
+		if max_page_size is not None and page_size>max_page_size:
+			page_size=max_page_size
 		page=int(params.get('page',1))
 		print("PAGINATION:",paginate, page_size,page)
 
