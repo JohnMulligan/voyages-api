@@ -630,6 +630,9 @@ class VoyageLineAndBarChartsRequestSerializer(serializers.Serializer):
 		)
 	]
 )
+class VoyageBibliographyRequestSerializer(serializers.Serializer):
+	voyage_ids=serializers.ListField(child=serializers.IntegerField())
+
 class VoyageDataframesRequestSerializer(serializers.Serializer):
 	selected_fields=serializers.ListField(
 		child=serializers.ChoiceField(choices=[
@@ -742,6 +745,7 @@ class VoyageAggRoutesNodesSerializer(serializers.Serializer):
 class VoyageAggRoutesResponseSerializer(serializers.Serializer):
 	edges=serializers.ListField(child=VoyageAggRoutesEdgesSerializer())
 	nodes=serializers.ListField(child=VoyageAggRoutesNodesSerializer())
+	voyage_mappings=serializers.DictField(required=False)
 
 ############ AGGREGATION FIELD
 @extend_schema_serializer(
