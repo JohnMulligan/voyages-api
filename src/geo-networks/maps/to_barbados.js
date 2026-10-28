@@ -19,6 +19,7 @@ var routeNodes = [
 	new L.LatLng(-36.03133177633188, 30.585937500000004),
 	new L.LatLng(13.99270643865856, -59.27124023437501),
 	new L.LatLng(17.41354611437445, -72.44384765625001),
+	new L.LatLng(10.595820834654047, -22.34619140625),
 ];
 var links = [
 	{ start: 3, end: 5 },
@@ -36,4 +37,5 @@ var links = [
 	{ start: 18, end: 9 },
 	{ start: 17, end: 8 },
 	{ start: 19, end: 0 },
+	{ start: 20, end: 5 },
 ];

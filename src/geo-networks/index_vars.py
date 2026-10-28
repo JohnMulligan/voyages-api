@@ -63,7 +63,7 @@ to_barbados={
 		},
 		{
 			'name':'region',
-# 			'swap_trigger_vals':[60700,60100],
+			'swap_trigger_vals':[32100],
 			'ordered_node_classes':[
 				{
 					'tag':'embarkation',
